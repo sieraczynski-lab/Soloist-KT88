@@ -4,7 +4,7 @@ Projekt DIY wzmacniacza lampowego w stereo, opartego na układzie **Mullard 5-20
 
 **EF86 → E88CC (odwracacz z długim ogonem, źródło prądowe DN2540) → 2× KT88 w układzie ultraliniowym, bias stały ≈ −80 V**
 
-Do tego sterowanie na **ESP32-S3**: sekwencja włączania, pomiar prądu każdej KT88, automatyczna korekta biasu, przełącznik UL/trioda, przełącznik kolumn Marantz / Lampa i wejście trigger 12 V z amplitunera.
+Do tego sterowanie na **ESP32-S3**: sekwencja włączania, pomiar prądu każdej KT88, automatyczna korekta biasu, przełącznik UL/trioda, przełącznik kolumn Marantz / Lampa i wejście trigger 12 V z amplitunera. Na wejściu **selektor 4 wejść z przekaźnikową drabinką głośności** 0–63 dB.
 
 > ⚠️ **Wysokie napięcie.** W tym urządzeniu jest do ok. 560 V DC i 230 V AC. Kondensatory trzymają ładunek po wyłączeniu. Budujesz i uruchamiasz na własną odpowiedzialność, a pierwsze włączenia rób przez żarówkę szeregową, zgodnie z [procedurą uruchomienia](docs/06-uruchomienie.md).
 
@@ -27,6 +27,7 @@ Do tego sterowanie na **ESP32-S3**: sekwencja włączania, pomiar prądu każdej
 |---|---|
 | [`docs/`](docs/) | dokumentacja: układ, zasilanie, sterowanie, płytki, obudowa, uruchomienie, zakupy, decyzje |
 | [`hardware/pcb/`](hardware/pcb/) | gotowe pliki płytek: import do EasyEDA Pro, projekty KiCad, PDF-y rozmieszczenia, BOM do JLCPCB i LCSC, [`CZYTAJ_MNIE.txt`](hardware/pcb/CZYTAJ_MNIE.txt) |
+| [`hardware/selektor/`](hardware/selektor/) | selektor wejść z drabinką głośności: projekt KiCad 8, eksport do EasyEDA Pro, BOM do JLCPCB i LCSC |
 | [`hardware/case/`](hardware/case/) | obudowa: STEP (do Fusion 360), DXF do cięcia laserem, lista części, widoki |
 | [`site/index.html`](site/index.html) | strona projektu: schematy, punkty pracy, sekwencja, zabezpieczenia, lista elementów |
 | [`src/`](src/) | skrypty w Pythonie, które generują wszystko powyżej ([jak uruchomić](src/README.md)) |
@@ -41,6 +42,7 @@ Do tego sterowanie na **ESP32-S3**: sekwencja włączania, pomiar prądu każdej
 | `sterowanie` | 100 × 100 mm | 1 | ESP32-S3, 2× ADS1115, MCP4728 + LM324, ULN2803, IRM-15-12; elementy SMD montuje JLCPCB |
 | `ul` | 74 × 48 mm | 2 | przekaźniki UL/trioda (G2RL-2), jeden na KT88 |
 | `glosniki` | 100 × 42 mm | 1 | przełącznik kolumn Marantz / Lampa (2× G2RL-2) |
+| [`selektor`](hardware/selektor/) | 96 × 74 mm | 1 | 4 wejścia, drabinka 0–63 dB co 1 dB, mute fail-safe; 11× G6K-2F-Y, MCP23017 (I²C 0x20), 2× ULN2803; tylko 12 V |
 
 ## Dokumentacja
 
@@ -54,10 +56,12 @@ Do tego sterowanie na **ESP32-S3**: sekwencja włączania, pomiar prądu każdej
 8. [Części i zakupy: lampy, przewody, przekaźniki, BOM](docs/08-czesci-i-zakupy.md)
 9. [Historia decyzji i poprawek](docs/09-historia-decyzji.md)
 10. [Do zrobienia / do sprawdzenia](docs/10-do-zrobienia.md)
+11. [Selektor wejść i drabinka głośności](docs/11-selektor.md)
 
 ## Stan
 
 - Płytki: wersja **0.23**. Kanał po routingu w EasyEDA (wersja 0.21, od tamtej pory bez zmian). Pozostałe płytki do routingu.
+- Selektor: wersja **0.5**, schemat gotowy, elementy rozmieszczone, do routingu ([szczegóły](docs/11-selektor.md)).
 - Obudowa: wersja **0.4**.
 - Strona projektu: wersja **0.12**.
 - Program ESP32: opisany (sekwencje, algorytmy, progi), jeszcze nienapisany.

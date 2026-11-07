@@ -7,3 +7,10 @@ src/case/Soloist88_obudowa_v*/
 rv_*.png
 rv_*.html
 pv_*
+
+# KiCad (selektor)
+*-backups/
+*.kicad_prl
+*.lck
+fp-info-cache
+_autosave-*

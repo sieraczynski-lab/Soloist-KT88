@@ -31,6 +31,18 @@ Zapis najważniejszych ustaleń, łącznie z błędami, które zostały znalezio
   - płytki UL/trioda.
 - **v0.23:** płytka przełącznika kolumn i wejście trigger.
 
+## Selektor wejść (osobna sesja, 10–11.2026)
+
+- **Przekaźniki zamiast scalaków** (CD4052, ADG14xx, NJW1194, PGA2311, TDA7439): brak półprzewodnika w torze. Przekaźniki mocy odrzucone (*dry switching*), wybrany sygnałowy Omron G6K-2F-Y DC12.
+- **Bez EQ we wzmacniaczu**: korekcja cyfrowo w źródle; analogowy procesor z bypassem byłby duplikacją.
+- **Drabinka series-shunt 10 kΩ, 6 bitów co 1 dB**; krok 0,5 dB odrzucony (nierówne kroki przy dostępnych rezystorach, więcej klikania).
+- **Mute fail-safe**: K11 bez prądu zwiera wyjście do masy.
+- **v0.2:** MCP23017 + 2× ULN2803 na płytce selektora (sam MCP nie wysteruje 12 V, sam ULN ma 8 kanałów przy 11 cewkach); osobna masa DGND.
+- **v0.3:** tylko 12 V, 3,3 V z mini przetwornicy na płytce.
+- **v0.4:** wartości drabinki przeliczone na rezystory 0,1% dostępne w JLCPCB/LCSC (wcześniejsze E192 nie były dostępne); błąd ≤ 0,21 dB.
+- **v0.5:** ULN2803ADWR (TI, ok. 6 USD) → UTC ULN2803G-S18-R (0,29 USD), jak na płytce sterowania.
+- Poprawka dokumentacji: w [07](07-zrodla-i-poziomy.md) był numer LCSC C47190, czyli G6K-2F-Y **DC5**; dla 12 V właściwy jest C397192.
+
 ## Błędy znalezione przy przeglądzie (25.10.2026)
 
 1. **Korekta biasu obciążała szynę biasu ok. 10 mA**: szyna spadłaby do ok. −71 V i odpalał alarm. Poprawka: przesuwnik 68k/33k z wyjściem 1k (ok. 0,9 mA na lampę) i R142 1k5 → 1k.

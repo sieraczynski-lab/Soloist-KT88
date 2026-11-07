@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "TubeSel")(type "KiCad")(uri "${KIPRJMOD}/TubeSel.kicad_sym")(options "")(descr "Symbole projektu selektora"))
+)

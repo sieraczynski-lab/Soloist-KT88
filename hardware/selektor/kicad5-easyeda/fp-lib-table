@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name TubeSel)(type KiCad)(uri ${KIPRJMOD}/TubeSel.pretty)(options "")(descr "Footprinty projektu"))
+)

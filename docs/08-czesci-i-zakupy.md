@@ -31,7 +31,7 @@
 
 Wszędzie **Omron G2RL-2-DC12** (DPDT 8 A / 250 V AC, izolacja cewka–styki 5 kV, LCSC C61458): K1–K4, 4× UL/trioda, 2× kolumny, razem 10 szt. Cewka nie ma biegunowości („No coil polarity”). Kierunek wymusza tylko dioda gasząca (katoda do +12 V).
 
-Do selektora i drabinki głośności (osobny projekt): **G6K-2F-Y** (sygnałowy, złocone styki). Nie nadaje się do UL/trioda (125 V AC).
+Do [selektora i drabinki głośności](11-selektor.md): **G6K-2F-Y-TR DC12** (sygnałowy, złocone styki, cewka 12 V 1315 Ω, **polaryzowana**: pin 1 = +12 V; LCSC C397192), 11 szt. na płytkę. Nie nadaje się do UL/trioda (125 V AC). Komplet części selektora do wgrania w LCSC: [`hardware/selektor/kicad/LCSC_zamowienie.csv`](../hardware/selektor/kicad/LCSC_zamowienie.csv).
 
 ULN2803: **ULN2803G-S18-R** (UTC, LCSC C33924), tańszy od TI. Sprawdź, że obudowa SOP-18 ma 7,5 mm szerokości.
 

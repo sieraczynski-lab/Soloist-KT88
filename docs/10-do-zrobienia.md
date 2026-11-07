@@ -20,7 +20,9 @@
 ## Projekt
 
 - [ ] **Program ESP32:** sekwencja, zabezpieczenia, korekta biasu, UL/trioda, przełącznik kolumn, trigger, IR, wyświetlacz.
-- [ ] **Selektor wejść z drabinką** (osobna sesja): poziomy i limity z [07](07-zrodla-i-poziomy.md).
+- [x] **Selektor wejść z drabinką**: projekt v0.5, [11](11-selektor.md). Limity poziomów z [07](07-zrodla-i-poziomy.md).
+- [ ] **Selektor:** routing, DRC/ERC, pomiar modułu DC-DC; reszta w [11, rozdz. 18](11-selektor.md#18-otwarte-punkty).
+- [ ] **Sterowanie ↔ selektor:** złącze dla selektora (12 V, I²C, MUTE) na płytce sterowania i decyzja, czy MUTE (GPIO14, J3) ma sterować K11 selektora ([11, rozdz. 7.5](11-selektor.md#75-integracja-z-płytką-sterowania)).
 - [ ] **Płyta Williamsona od Onyxa:** schemat → porównanie i specyfikacja transformatorów pasujących do obu wersji.
 - [ ] Routing płytek: zasilacz_siec, zasilacz_hv, sterowanie, ul, glosniki.
 - [ ] Wartości dobierane pomiarem: R104 (NFB), C103 (kompensacja), ewentualnie R128/C107.

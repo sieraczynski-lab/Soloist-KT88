@@ -15,6 +15,7 @@ Wszystkie pliki w `hardware/` i `site/` powstają z tych skryptów (Python 3, be
 | `case/stepw.py` | zapis STEP (ADVANCED_BREP) |
 | `case/export_pkg.py` | STEP, DXF, lista części, widoki → `Soloist88_obudowa_vX` |
 | `case/chkstep.py`, `case/chk2d.py` | walidacja brył i konturów |
+| `selektor/` | generator i weryfikacja płytki selektora (osobny, [opis](selektor/README.md)) → `hardware/selektor/` |
 | `calc.py` | obliczenia punktów pracy |
 | `build.py`, `draw.py`, `sch.py`, `sch.css` | strona projektu (`soloist88.html`) ze schematami SVG |
 | `preview.py` | podglądy schematów strony do PNG (Playwright) |

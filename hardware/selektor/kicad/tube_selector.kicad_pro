@@ -1,0 +1,329 @@
+{
+  "board": {
+    "design_settings": {
+      "defaults": {
+        "board_outline_line_width": 0.1,
+        "copper_line_width": 0.2,
+        "copper_text_size_h": 1.5,
+        "copper_text_size_v": 1.5,
+        "silk_line_width": 0.12,
+        "silk_text_size_h": 1.0,
+        "silk_text_size_v": 1.0,
+        "silk_text_thickness": 0.15
+      },
+      "rules": {
+        "min_clearance": 0.2,
+        "min_track_width": 0.2,
+        "min_via_diameter": 0.5,
+        "min_through_hole_diameter": 0.3,
+        "min_copper_edge_clearance": 0.3,
+        "min_hole_clearance": 0.25,
+        "min_silk_clearance": 0.0
+      },
+      "track_widths": [
+        0.0,
+        0.3,
+        0.5
+      ],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        },
+        {
+          "diameter": 0.6,
+          "drill": 0.3
+        }
+      ]
+    }
+  },
+  "meta": {
+    "filename": "tube_selector.kicad_pro",
+    "version": 1
+  },
+  "net_settings": {
+    "classes": [
+      {
+        "name": "Default",
+        "clearance": 0.2,
+        "track_width": 0.3,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "diff_pair_width": 0.2,
+        "diff_pair_gap": 0.25,
+        "wire_width": 6,
+        "bus_width": 12,
+        "line_style": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "pcb_color": "rgba(0, 0, 0, 0.000)"
+      },
+      {
+        "name": "Audio",
+        "clearance": 0.3,
+        "track_width": 0.4,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "diff_pair_width": 0.2,
+        "diff_pair_gap": 0.25,
+        "wire_width": 6,
+        "bus_width": 12,
+        "line_style": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "pcb_color": "rgba(0, 0, 0, 0.000)"
+      },
+      {
+        "name": "Coil",
+        "clearance": 0.25,
+        "track_width": 0.3,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "diff_pair_width": 0.2,
+        "diff_pair_gap": 0.25,
+        "wire_width": 6,
+        "bus_width": 12,
+        "line_style": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "pcb_color": "rgba(0, 0, 0, 0.000)"
+      }
+    ],
+    "meta": {
+      "version": 3
+    },
+    "netclass_assignments": null,
+    "netclass_patterns": [
+      {
+        "netclass": "Audio",
+        "pattern": "/A1_L"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/A1_R"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/A2_L"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/A2_R"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/A3_L"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/A3_R"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/A4_L"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/A4_R"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/A5_L"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/A5_R"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/BUS_L"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/BUS_R"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/IN1_L"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/IN1_R"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/IN2_L"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/IN2_R"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/IN3_L"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/IN3_R"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/IN4_L"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/IN4_R"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/OUT_L"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/OUT_R"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/P1_L"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/P1_R"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/P2_L"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/P2_R"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/P3_L"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/P3_R"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/P4_L"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/P4_R"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/P5_L"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/P5_R"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/P6_L"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/P6_R"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/SH1_L"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/SH1_R"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/SH2_L"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/SH2_R"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/SH3_L"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/SH3_R"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/SH4_L"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/SH4_R"
+      },
+      {
+        "netclass": "Coil",
+        "pattern": "/+12V"
+      },
+      {
+        "netclass": "Coil",
+        "pattern": "/COIL1"
+      },
+      {
+        "netclass": "Coil",
+        "pattern": "/COIL10"
+      },
+      {
+        "netclass": "Coil",
+        "pattern": "/COIL11"
+      },
+      {
+        "netclass": "Coil",
+        "pattern": "/COIL2"
+      },
+      {
+        "netclass": "Coil",
+        "pattern": "/COIL3"
+      },
+      {
+        "netclass": "Coil",
+        "pattern": "/COIL4"
+      },
+      {
+        "netclass": "Coil",
+        "pattern": "/COIL5"
+      },
+      {
+        "netclass": "Coil",
+        "pattern": "/COIL6"
+      },
+      {
+        "netclass": "Coil",
+        "pattern": "/COIL7"
+      },
+      {
+        "netclass": "Coil",
+        "pattern": "/COIL8"
+      },
+      {
+        "netclass": "Coil",
+        "pattern": "/COIL9"
+      }
+    ]
+  },
+  "schematic": {
+    "legacy_lib_dir": "",
+    "legacy_lib_list": []
+  },
+  "sheets": [
+    [
+      "ef275d2b-1c56-5b4d-b29b-01ed738d1dff",
+      "Root"
+    ]
+  ],
+  "text_variables": {}
+}

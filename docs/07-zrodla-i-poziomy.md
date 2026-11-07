@@ -1,6 +1,6 @@
 # 7. Źródła sygnału i poziomy
 
-Wzmacniacz ma **czułość ok. 160 mV** na pełną moc (z obliczeń) i **impedancję wejściową 220 kΩ**. Źródła liniowe dają dużo więcej, więc w selektorze (osobny projekt) potrzebna jest regulacja głośności. Stały tłumik nie jest potrzebny.
+Wzmacniacz ma **czułość ok. 160 mV** na pełną moc (z obliczeń) i **impedancję wejściową 220 kΩ**. Źródła liniowe dają dużo więcej, więc w [selektorze](11-selektor.md) potrzebna jest regulacja głośności. Stały tłumik nie jest potrzebny.
 
 ## Poziomy źródeł
 
@@ -17,7 +17,7 @@ Limit liczy się tak: 20·log(0,16 V / napięcie źródła), plus ok. 3 dB zapas
 
 ## Zalecenia dla selektora wejść
 
-1. Głośność regulowana **drabinką na przekaźnikach** (Omron G6K-2F-Y, LCSC C47190; wersja bistabilna G6KU-2F-Y jest poza LCSC). Zakres 0…−63 dB co 1 dB (6 przekaźników) albo co 0,5 dB (7 przekaźników). Impedancja 10–20 kΩ.
+1. Głośność regulowana **drabinką na przekaźnikach** (Omron G6K-2F-Y DC12, LCSC C397192; C47190 to wersja DC5 z cewką 5 V; wersja bistabilna G6KU-2F-Y jest poza LCSC). **Zrobione** w [selektorze](11-selektor.md): 0…−63 dB co 1 dB (6 przekaźników), impedancja ok. 10 kΩ. Krok 0,5 dB odrzucony ([11, rozdz. 2.4](11-selektor.md#24-krok-1-db-nie-05-db)).
 2. **WiiM: stała głośność** (Fixed Volume), wyjście 2 V albo 1 V. Tłumienie jest wtedy analogowe, a WiiM ma pełną rozdzielczość.
 3. **Dla każdego wejścia w ESP32:**
    - poprawka poziomu, żeby głośność była podobna po przełączeniu;
