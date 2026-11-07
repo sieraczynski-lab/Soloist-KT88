@@ -1,0 +1,4 @@
+﻿Klasa;Szerokosc [mm];Odstep [mm];Odstep do innych klas;Sieci;Uwagi
+GLOSNIK;2,0;0,5;;MAR_LP MAR_LN MAR_RP MAR_RN TUBE_LP TUBE_LN TUBE_RP TUBE_RN SPK_LP SPK_LN SPK_RP SPK_RN;"do ok. 5 A skutecznie (Marantz 100 W / 4 Ohm); sciezki obustronnie lub szerzej, jesli sie zmiesci"
+CEWKI;0,5;0,3;;+12V RLY_SPK;2 x 33 mA
+Default;0,4;0,3;;(pozostale sieci);

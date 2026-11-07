@@ -1,0 +1,105 @@
+SOLOIST 88 - OBUDOWA, propozycja v0.4 (05.11.2026)
+====================================================
+
+PLIKI
+  Soloist88_obudowa.step               - same czesci do wykonania (aluminium, stal, drewno)
+  Soloist88_obudowa_z_elementami.step  - to samo + elementy odniesienia (REF_*): lampy, podstawki,
+                                          plytki PCB, transformatory, galki, pretow oslony itd.
+  DXF/                                  - plaskie kontury kazdej plyty 1:1 (do ciecia laserem)
+  lista_czesci.csv                      - wymiary, material, grubosc
+  widok_*.png                           - podglad
+
+  Bryly w STEP sa dokladne (B-rep): plaskie sciany, prawdziwe otwory walcowe i luki - w Fusion 360
+  importuja sie jako zwykle bryly, mozna je wymiarowac, wycinac, dodawac fazki itd.
+  DXF: okregi jako CIRCLE, zaokraglenia jako luki (bulge).
+
+ZMIANY W v0.4
+  - Tyl: 4 pary zaciskow glosnikowych - gorny rzad (Z 100) wejscia Z MARANTZA, dolny (Z 70)
+    wyjscia DO KOLUMN; gniazdo TRIGGER 3,5 mm (otwor 6 mm) obok gniazda IEC.
+  - Dno: 3 otwory M3 pod plytke przelacznika glosnikow (pod lewym TG, X 82-124, Y 340-440).
+  - Oslona lamp wyzej o 15 mm (gorna ramka Z 225) - zmiesci tez KT120 (do 144 mm).
+
+UKLAD WSPOLRZEDNYCH
+  0,0,0 = lewy przedni dolny rog dna aluminiowego; X w prawo, Y do tylu, Z w gore [mm].
+
+WYMIARY OGOLNE
+  Dno aluminiowe 400 x 460 mm; z bokami drewnianymi 440 mm szerokosci; z frontem 480 mm glebokosci.
+  Czesc lampowa: wnetrze 100 mm (pokrywa na Z 103-106).
+  Obudowa transformatorow: Y 310-460, wysokosc do Z 156.
+  Oslona lamp: do Z ok. 228 + nakretki kolpakowe; nozki 15 mm.
+
+MATERIALY
+  Aluminium 3 mm (AL_*) - stop 5754 lub 5052 (dobrze sie gnie i spawa; 6061/6082 peka przy gieciu).
+  Stal nierdzewna 2,5 mm (SS_*) - ramki oslony lamp; tulejki 10 mm z otworem 4,4 mm, dl. 49,5 mm.
+  Stal ocynkowana / czarna (ST_*) - profile 20 x 20 x 1,5 mm na przewody wejsciowe.
+    Przykrecane do dna (2 x M4), NIE spawane z aluminium; podkladka izolujaca / lakier na styku.
+  Drewno: boki 20 mm; front = lico 5 mm (fornir) + rama 15 mm (kieszenie na galki, wyswietlacze).
+
+POLACZENIA (WYPUSTY / GNIAZDA)
+  Wypusty 15 x 3 mm, gniazda z luzem 0,1 mm na strone.
+  - Boki aluminiowe: jedna czesc na strone (nisko z przodu, wysoko przy trafo), 4 wypusty w dno,
+    3 w dach trafo, polaczenie z przodem i tylem na palce (3 / 4 wypusty, rogi rowno).
+  - Przednia scianka trafo: 3 wypusty w dno, 3 w dach, po 3 w boki.
+  - Tyl (scianka trafo): 3 w dno, 3 w dach, palce z bokami.
+  - Przegrody trafo (opcjonalne): po 3 wypusty w dno, dach, przod i tyl.
+  - Przednia scianka aluminiowa (za drewnem): 3 wypusty w dno, palce z bokami.
+  Wypusty wchodza w gniazda/wyciecia na krawedziach dna i dachu na pelna grubosc (3 mm),
+  wiec po spawaniu/szlifowaniu powierzchnie sa rowne.
+  Uwaga do montazu: dno z transformatorami przykrecane do zespawanej skorupy (boki + trafo + przod),
+  albo dno spawane, a transformatory montowane od gory przed nalozeniem dachu trafo.
+
+POKRYWA GORNA
+  Zdejmowana, 4 wkrety M4 w rogach w tuleje dystansowe 100 mm (REF_tulejka_M4_100mm).
+  Konczy sie na Y 307 - przy scianie trafo, wiec zdjecie pokrywy nie rusza transformatorow.
+  Otwory: KT88 fi 60, EF86/E88CC fi 27 (podstawki z plytek kanalow), mocowanie plytek kanalow M3,
+  prety oslony M4, wentylacja nad srodkowa kolumna (zasilacz HV, R_SS).
+
+KT88 (podstawki ceramiczne na szpilkach)
+  Srodki: X 50 / 120 / 280 / 350, Y 235. W dnie wokol kazdej: 24 otwory fi 3,5 na okregu fi 50
+  co 15 stopni - podstawke mozna obrocic co 15 stopni. ROZSTAW OTWOROW PODSTAWKI SPRAWDZ
+  (przyjalem 50 mm); jesli inny, podaj - zmienie srednice okregu.
+  Plus otwory wentylacyjne fi 6 w dnie wokol podstawek. Gora podstawki przyjeta na Z 62.
+
+OSLONA LAMP (na kanal)
+  Ramka dolna (lezy na pokrywie) obejmuje 4 lampy kanalu, ramka srodkowa i gorna - tylko KT88.
+  4 prety M4 przez pokrywe + tulejki 10 mm miedzy ramkami + nakretki kolpakowe; piaty, krotki
+  wkret z przodu ramki dolnej (miedzy EF86 i E88CC).
+
+FRONT (od lewej): przycisk wlacznika fi 16 + dioda 2-kolorowa 5 mm nad nim, galka selektora,
+  2 okragle wyswietlacze (otwor fi 33 w licu, kieszen fi 40 w ramie - np. 1,28" GC9A01),
+  galka glosnosci, okienko odbiornika IR fi 6.
+  Enkodery mocowane w aluminiowej sciance (otwor fi 7,5) - przez 20 mm drewna potrzebna os
+  ok. 30 mm od kolnierza (EC11 z dluga osia) albo przedluzka.
+
+TYL (scianka obudowy trafo): gniazdo IEC C14 z bezpiecznikiem (wyciecie 27,5 x 32 - sprawdz
+  z gniazdem), 4 pary zaciskow glosnikowych fi 9 (gora: z Marantza, dol: do kolumn; X 35/60 i 340/365),
+  gniazdo TRIGGER jack 3,5 mm mono fi 6 (X 245, Z 45) - korpus plastikowy, izolowany od obudowy,
+  sruba PE fi 4,5,
+  gniazda RCA L i P (otwor fi 10, gniazda IZOLOWANE od obudowy) w dolnych rogach, w osi profili.
+
+WEJSCIA (DAC zewnetrzny)
+  RCA z tylu -> ekranowana skretka (2 zyly + ekran) w profilu stalowym 20 x 20 przy scianie
+  bocznej, pod transformatorem glosnikowym -> wyjscie z profilu w czesci lampowej (Y 300) ->
+  wejscie plytki kanalu (przy zewnetrznej krawedzi). Ekran kabla laczony z masa tylko po
+  stronie plytki. Transformatory glosnikowe podniesione o 35 mm na tulei (REF_tuleja_TG),
+  zeby profil przeszedl pod nimi; w przedniej sciance trafo wyciecia 20,5 x 20,5 w rogach.
+  Stal odciaga pole magnetyczne (50 Hz i pasmo audio), czego aluminium nie robi.
+
+EKRAN STEROWANIA
+  AL_ekran_sterowania: plyta 3 mm nad plytka sterowania na 4 tulejach M3 (Z 47), uziemiona.
+  Ogranicza zaklocenia z ESP32, przetwornicy i IRM-15 do wejsc. Wi-Fi ESP32 pod ekranem
+  w aluminiowej obudowie bedzie slabe - do zdalnego sterowania raczej IR.
+
+ROZMIESZCZENIE W SRODKU (do sprawdzenia, wszystko parametryczne)
+  Plytki kanalow (pod pokrywa): L X 35-135 / Y 90-190, P X 265-365 / Y 50-150 (obrocona 180 st.).
+  EF86 i wejscia przy zewnetrznych krawedziach (X 48 i 352), E88CC blizej srodka.
+  Srodkowa kolumna na dnie: sterowanie Y 5-105, zasilacz_siec Y 107-207, zasilacz_hv Y 209-309.
+  Transformatory (fi x wys., ZALOZENIA - podaj prawdziwe wymiary):
+    TG L i P fi 120 x 65 (podniesione o 35 mm), sieciowy fi 130 x 65 + dlawik fi 105 x 55 na nim;
+    przegrody co 124/140/124 mm.
+
+DO USTALENIA
+  - wymiary transformatorow i dlawika (Toroidy.pl), podstawek KT88, gniazda IEC, zaciskow,
+    wyswietlaczy, przycisku;
+  - czy przegrody w obudowie trafo zostaja;
+  - nozki (w modelu fi 40 x 15).

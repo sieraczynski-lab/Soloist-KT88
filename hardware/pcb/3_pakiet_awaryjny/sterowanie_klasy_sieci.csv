@@ -1,0 +1,9 @@
+﻿Klasa;Szerokosc [mm];Odstep [mm];Odstep do innych klas;Sieci;Uwagi
+SIEC_230;0,8;3,0;6,0 do wszystkich innych;L_PS N_PS;"230 V do PS1 (IRM-15-12), ok. 0,1 A; tylko miedzy J1 a PS1"
+WE_BIAS;0,4;1,5;;VBIAS;"-78 V wchodzi na plytke; krotko, z dala od 3V3/ESP32"
+ZASIL;0,8;0,3;;+12V +5V;cewki 8 przekaznikow (ok. 0,3 A) + przetwornica 5 V
+ANALOG;0,3;0,3;;IK_L1F IK_L2F IK_R1F IK_R2F VB_F HV_F;"wejscia ADS1115; z dala od ESP32 i DRV/RLY"
+KOREKTA;0,3;0,3;;DAC_L1 DAC_L2 DAC_R1 DAC_R2 DACF_L1 DACF_L2 DACF_R1 DACF_R2 FB_L1 FB_L2 FB_R1 FB_R2 OA_L1 OA_L2 OA_R1 OA_R2;"DAC -> LM324 -> filtr RC; krotko, z dala od ESP32 i przetwornicy"
+BIAS_KOR;0,3;1,5;;S_L1 S_L2 S_R1 S_R2 BI_L1 BI_L2 BI_R1 BI_R2;"ok. -50 V: przesuwnik R23-R30 i wyjscia R31-R34 do J10; krotko"
+GND;1,0;0,3;;GND;wylewka obustronna
+Default;0,4;0,3;;(pozostale sieci);

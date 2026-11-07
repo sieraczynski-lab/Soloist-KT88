@@ -1,0 +1,4 @@
+﻿Klasa;Szerokosc [mm];Odstep [mm];Odstep do innych klas;Sieci;Uwagi
+UL_HV;0,8;2,5;6,0 do CEWKI;AN_A UL_A G2_A AN_B UL_B G2_B;"ok. 465 V DC + sygnal (anoda do ok. 850 V szczyt); bez wylewki masy"
+CEWKI;0,5;0,3;6,0 do UL_HV;+12V RLY_UL;cewki 2 x 33 mA
+Default;0,4;0,3;;(pozostale sieci);

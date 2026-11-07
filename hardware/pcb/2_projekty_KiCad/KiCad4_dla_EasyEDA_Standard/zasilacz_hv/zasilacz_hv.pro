@@ -1,0 +1,10 @@
+update=
+version=1
+last_client=eeschema
+[eeschema]
+version=1
+LibDir=
+[eeschema/libraries]
+LibName1=soloist88
+[pcbnew]
+version=1

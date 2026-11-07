@@ -1,0 +1,8 @@
+﻿Klasa;Szerokosc [mm];Odstep [mm];Odstep do innych klas;Sieci;Uwagi
+HT_AC;1,5;3,0;6,0 do CEWKI;HT_AC1 HT_AC2 HT_K3 K3_MID HT_IN;360 V AC (510 V szczyt), impulsy ladowania C1
+HV_DC;1,5;3,0;6,0 do CEWKI;HV_RAW B+3;"465-510 V; HV_RAW = petla ladowania, B+3 ok. 0,35 A"
+HV_MID;0,6;2,0;;C1_MID C2_MID HVS1 HVS2 ELEV_MID LED_M;155-255 V, srodki baterii, dzielnik pomiarowy, srodek R140A/B
+POMIAR;0,4;0,5;3,0 do HV_DC/HT_AC;HV_SENSE HTR_ELEV;HV_SENSE ok. 2 V do ADS1115
+CEWKI;0,5;0,3;6,0 do HT_AC/HV_DC;+12V RLY3 RLY4;strona sterowania K3/K4
+GND_LAD;2,0;0,3;;GND;"powrot petli ladowania; gwiazda J15"
+Default;0,4;0,3;;(pozostale sieci);

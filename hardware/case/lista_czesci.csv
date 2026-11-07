@@ -1,0 +1,25 @@
+﻿Czesc;Material;Grubosc [mm];Wymiar A [mm];Wymiar B [mm];Otwory/gniazda;Szt.
+AL_dno_400x460x3;aluminium 5754;3.0;400.0;460.0;163;1
+AL_bok_lewy;aluminium 5754;3.0;460.0;156.0;7;1
+AL_bok_prawy;aluminium 5754;3.0;460.0;156.0;7;1
+AL_przod_wewn;aluminium 5754;3.0;400.0;103.0;11;1
+AL_trafo_przod;aluminium 5754;3.0;400.0;156.0;10;1
+AL_trafo_tyl;aluminium 5754;3.0;400.0;156.0;19;1
+AL_trafo_przegroda_L;aluminium 5754;3.0;150.0;156.0;2;1
+AL_trafo_przegroda_P;aluminium 5754;3.0;150.0;156.0;2;1
+AL_trafo_dach;aluminium 5754;3.0;400.0;153.0;289;1
+AL_pokrywa_gorna;aluminium 5754;3.0;400.0;307.0;130;1
+SS_oslona_L_dolna;stal nierdzewna;2.5;148.0;182.0;9;1
+SS_oslona_L_srodkowa;stal nierdzewna;2.5;148.0;90.0;6;1
+SS_oslona_L_gorna;stal nierdzewna;2.5;148.0;90.0;6;1
+SS_oslona_P_dolna;stal nierdzewna;2.5;148.0;182.0;9;1
+SS_oslona_P_srodkowa;stal nierdzewna;2.5;148.0;90.0;6;1
+SS_oslona_P_gorna;stal nierdzewna;2.5;148.0;90.0;6;1
+ST_profil_20x20x1.5_L_dl157;profil stalowy 20x20x1,5 ocynk/czarny - dlugosc;157.0;20.0;20.0;1;1
+ST_profil_20x20x1.5_P_dl157;profil stalowy 20x20x1,5 ocynk/czarny - dlugosc;157.0;20.0;20.0;1;1
+AL_ekran_sterowania;aluminium 5754;3.0;104.0;100.5;5;1
+DREWNO_front_lico_5mm;MDF + fornir;5.0;440.0;106.0;7;1
+DREWNO_front_rama_15mm;MDF + fornir;15.0;440.0;106.0;7;1
+DREWNO_bok_lewy;MDF + fornir;20.0;460.0;106.0;0;1
+DREWNO_bok_prawy;MDF + fornir;20.0;460.0;106.0;0;1
+SS_tulejka_D10_D4.4_L49.5;stal nierdzewna (rurka 10x2,8 lub toczona);;10;49,5;;16

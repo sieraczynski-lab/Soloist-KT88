@@ -1,0 +1,448 @@
+SOLOIST 88 STEREO - PLYTKI PCB, wersja robocza 0.22 (25.10.2026)
+=================================================================
+
+ZMIANY W 0.23 (05.11.2026)
+  - Nowa plytka GLOSNIKI (100 x 42 mm): przelacznik kolumn Marantz SR7013 / Lampa, 2 x G2RL-2.
+  - Sterowanie: wyjscie J13 (cewki przelacznika, ULN2803 wyjscie 7, ESP32 GPIO18) i wejscie
+    TRIGGER 12 V z Marantza (J12, transoptor PC817 U8, R35, D13, R36, C17; ESP32 GPIO1).
+    Rozmieszczenie reszty plytki sterowania bez zmian.
+  - Plytki kanalu, zasilaczy i UL bez zmian.
+
+ZMIANY W 0.22 (poprawione po przegladzie 25.10.2026)
+  - Korekta biasu przeprojektowana: filtr RC przed LM324, przesuwnik 68k/33k, wyjscie 1k
+    (pierwsza wersja obciazala szyne biasu ok. 10 mA i obnizala ja do ok. -71 V, a dioda
+    zaciskowa przewodzila przy malych wartosciach DAC).
+  - R142 (zasilacz_siec) 1k5 -> 1k; R2 = R_IN (zasilacz_hv) 47R -> 100R 10 W (udar ladowania C1
+    przez styki K3 ok. 5 A zamiast 11 A). Tylko wartosci - footprinty bez zmian.
+  - PLYTKA KANALU BEZ ZMIAN (te same pozycje, sieci i identyfikatory co w 0.21 - Twoj routing zostaje).
+  - Przekazniki K1-K4: Omron G2RL-2-DC12 (LCSC C61458), footprint wg biblioteki KiCad
+    (Relay_DPDT_Omron_G2RL), juz nie przyblizony. K1, K2, K4 maja oba styki rownolegle,
+    K3 - dwa styki szeregowo jak dotad. Na zasilacz_siec i zasilacz_hv zmienil sie TYLKO
+    footprint K1-K4 (pozycje te same) i C140 przesuniety o 1 mm w prawo (X 78 -> 79).
+    W EasyEDA: zaimportuj nowe pliki albo w swoim projekcie podmien footprint K1-K4
+    i popraw sciezki do przekaznikow - reszta routingu zostaje.
+  - Plytka sterowania przerobiona na SMD (montaz w JLCPCB) + automatyczna korekta biasu
+    (MCP4728 + LM324) + wyjscie dla przekaznikow UL/trioda. Routing od nowa.
+  - Nowa plytka UL (74 x 48 mm, zamow 2 szt. - po jednej na kanal): przelacznik UL/trioda.
+
+PRZED ZAMOWIENIEM PLYTEK - SPRAWDZ (tego nie da sie zweryfikowac z plikow):
+  1. Przekaznik G2RL-2 - miernikiem na jednej sztuce: bez zasilania cewki pin 3-2 i 6-7 zwarte
+     (0 Ohm), po podaniu 12 V na piny 1-8: zwarte 3-4 i 6-5. Uklad otworow jest z biblioteki
+     KiCad, ale funkcji wyprowadzen (COM w srodku rzedu) nie potwierdzilem na rysunku Omron.
+     Jesli wyjdzie inaczej - daj znac, zmienie przypisanie pinow (wszystkie plytki z G2RL).
+  2. PS1 IRM-15-12: footprint i KOLEJNOSC PINOW przyblizone - podmien na footprint LCSC C6394169
+     i sprawdz, ktory pin to +V, a ktory -V.
+  3. ESP32-S3-DevKitC-1: rozstaw listew (przyjete 22,86 mm) - zmierz swoj modul.
+  4. Podstawki B9A, oprawki bezpiecznikow, zlacza srubowe - przyloz do wydruku 1:1 (PDF).
+  5. Nie podlaczaj USB do ESP32, gdy plytka jest zasilana z przetwornicy 5 V (chyba ze modul ma
+     diode na wejsciu USB - sprawdz schemat swojej wersji).
+
+Szesc projektow plytek, 100 x 100 mm (cena JLCPCB jak dla malych plytek, do 102 x 102 mm):
+  kanal          - zamow 2 sztuki (kanal L i P; na P zmien oznaczenia 1xx -> 2xx)
+  zasilacz_siec  - 230 V (K1, K2, R_SS), bezpieczniki F2/F3, bias ok. -80 V, zarzenie
+  zasilacz_hv    - napiecie anodowe: K3, K4, R_IN, mostek, kondensatory C1/C2, pomiar B+, elewacja zarzenia
+  sterowanie     - ESP32-S3, ADS1115, ULN2803, MCP4728 + LM324 (korekta biasu), PS1 IRM-15-12,
+                   mini przetwornica 5 V (U2); elementy SMD montuje JLCPCB
+  ul             - 74 x 48 mm, zamow 2 sztuki: przekazniki UL/trioda (2 x G2RL-2), mocowana na dnie
+                   miedzy dwiema KT88 kanalu
+  glosniki       - 100 x 42 mm: przelacznik kolumn Marantz / Lampa (2 x G2RL-2), w obudowie trafo
+                   na dnie pod lewym TG (X 82-124, Y 340-440, tuleje M3 ok. 5 mm)
+Lampy KT88 sa montowane na obudowie, nie na plytce. Przy ich podstawkach,
+bezposrednio na nozkach, lutujesz R117/R118 (4k7), R123/R124 (270R 2W) i R125/R126 (10R 1%).
+
+Plytki dwustronne, FR-4 1,6 mm, miedz 1 oz (35 um) wystarcza - szerokosci sciezek maja zapas
+(2,0 mm = ok. 3,9 A, 1,5 mm = 3,2 A, 1,0 mm = 2,4 A przy przyroscie 10 C, IPC-2221).
+
+PLYTKA KANALU - MONTAZ DWUSTRONNY
+ - GORA (strona elementow, od pokrywy obudowy): podstawki EF86 i E88CC oraz male rezystory
+   (R101-R110, R113-R116, R119-R122, R128, R129, R131 1 W).
+ - DOL: WSZYSTKIE kondensatory (C101-C108, C130, C131), R111, R112, R130,
+   Q101 z radiatorem, D105 oraz potencjometry P101-P103 - dostepne od spodu do regulacji.
+ - Lampy przy krawedziach: srodek V101 (EF86) X 13 / Y 30 mm, V102 (E88CC) X 87 / Y 30 mm
+   (od lewego gornego rogu plytki, widok od gory) - odstep 74 mm. Otwory w pokrywie wg tych wymiarow.
+ - Plytka wisi pod pokrywa na tulejach dystansowych; podstawki przechodza przez otwory w pokrywie.
+   Wysokosc tulei = wysokosc podstawki minus grubosc pokrywy (zwykle 10-12 mm), elementy na gorze
+   musza byc nizsze od tej szczeliny (rezystory lezace, male kondensatory - OK).
+ - Kolejnosc lutowania: najpierw elementy z gory, potem z dolu; luty elementow dolnych sa po stronie gornej.
+
+ZLACZA SRUBOWE NA PLYTCE ZASILACZ_SIEC
+  Wszystkie przewody na zasilacz_siec ida przez zlacza srubowe do druku, oprocz J32
+  (cewki przekaznikow 12 V - listwa kolkowa / wtyk). Zasilacz_hv zostaje na polach lutowniczych.
+  Raster 5,08 mm (min. 250 V AC, 10 A):
+    J1  SIEC      1 L (po F1 i SW1), 2 N
+    J3  PS1       1 L (za F2), 2 N - do plytki sterowania J1 (zasilacz PS1 IRM-15-12)
+    J5  TR1_PRI   1 L, 2 N
+    J19 BIAS_AC   S4 65 V
+    J21 -80V      1 kanal L, 2 kanal R, 3 sterowanie J5
+    J24 H2        odczep S2 (sztuczny srodek R11/R12)
+    J26 H3_IN     S3 6,3 V / 3 A
+    J28 H3_KAN_L  zarzenie kanalu L (1 H3_A, 2 H3_B)
+    J30 H3_KAN_R  zarzenie kanalu R
+    J34 Z_HV      1 +42 V (z HV J36), 2 GND (z HV J37)
+  Raster 7,62 mm, MIN. 400 V AC:
+    J38 S1_HT     1 z TR1 S1, 2 do plytki HV J7 (przez F3)
+  Footprinty maja korpus 8,5 mm (5,08) i 10 mm (7,62) - sprawdz z wybranymi zlaczami
+  (np. Phoenix MKDS, Degson, Wago 236/2604). Wejscia przewodow kieruj do krawedzi plytki.
+  Linki zaciskaj w tulejkach, nie cynuj koncowek.
+
+POLACZENIA MIEDZY PLYTKAMI ZASILACZA
+  zasilacz_hv J36 HTR_ELEV  ->  zasilacz_siec J34 pin 1 (+42 V elewacji zarzenia)
+  zasilacz_hv J37 GND_SIEC  ->  zasilacz_siec J34 pin 2 (masa)
+  TR1 S1 (360 V), jeden koniec -> zasilacz_siec J38 pin 1 -> F3 -> J38 pin 2 -> zasilacz_hv J7 (HT_AC1)
+  TR1 S1, drugi koniec          -> zasilacz_hv J8 (HT_AC2)
+  sterowanie J2 RELAY: pin 1 (+12V), 2 (RLY1), 3 (RLY2) -> zasilacz_siec J32
+                       pin 1 (+12V), 4 (RLY3), 5 (RLY4) -> zasilacz_hv J33
+  zasilacz_siec J21 pin 3 (ok. -80 V) -> sterowanie J5 pin 1;  zasilacz_hv J18 HV_SENSE -> sterowanie J5 pin 2
+  sterowanie J10 BIAS_KOR (korekta biasu, przewody skrecone z masa, z dala od przewodow anodowych):
+       pin 1 -> TP106 kanalu L (BIAS_T, KT88 V103)     pin 2 -> TP107 kanalu L (BIAS_B, V104)
+       pin 3 -> TP206 kanalu P (V203)                  pin 4 -> TP207 kanalu P (V204)
+       Przewod przylutuj do pola punktu pomiarowego (od spodu, z koszulka termokurczliwa).
+       Kolejnosc musi odpowiadac kolejnosci pomiaru pradu na J4 (IK_L1 = V103 itd.).
+  sterowanie J11 UL_TRIODA: piny 1-2 (+12V, RLY_UL) -> plytka UL kanalu L J3,
+                            piny 3-4 -> plytka UL kanalu P J3
+Kondensatory C1A/C1B/C2A/C2B: 470 uF / 400 V snap-in w obudowie 30 x 50 mm (raster 10 mm).
+
+1. IMPORT DO EASYEDA
+--------------------
+NAJPIERW ROZPAKUJ cala paczke. Do EasyEDA importujesz pojedyncze pliki ZIP z folderu
+1_import_EasyEDA, nie cala paczke.
+
+EasyEDA Pro (zalecane):
+  <plytka>_EasyEDA_Pro.zip - projekt KiCad 5.1 (schemat + PCB + biblioteki),
+  w strukturze jak z funkcji "Archiwizuj projekt" KiCada.
+  Strona startowa EasyEDA Pro > Import > KiCad > wskaz np. kanal_EasyEDA_Pro.zip.
+
+EasyEDA Standard:
+  <plytka>_Standard_schemat.zip - schemat (KiCad 4) z biblioteka symboli
+  <plytka>_Standard_pcb.zip     - plytka (KiCad 4)
+  Plik > Otworz > KiCad, kazdy plik osobno.
+
+Jesli import nadal nie dziala:
+  a) zainstaluj KiCad 5.1 (darmowy), otworz projekt z folderu
+     2_projekty_KiCad/KiCad5_dla_EasyEDA_Pro, zapisz, uzyj "Archiwizuj projekt"
+     i zaimportuj powstaly ZIP do EasyEDA Pro;
+  b) albo zaimportuj do EasyEDA Standard, a potem przenies projekt do Pro
+     jego wbudowanym importem projektow Standard.
+
+Uwagi:
+ - Schematy maja narysowane przewody. Etykiety zostaly tylko na szynach zasilania
+   (GND, B+1/2/3, VBIAS, zarzenie, +12V, 3V3) i na wyprowadzeniach ESP32 / ADS1115 / ULN2803.
+   Etykiety o tej samej nazwie sa ze soba polaczone.
+ - PCB zawiera rozmieszczenie, obrys, otwory M3 i polaczenia (ratsnest). Sciezek nie ma.
+ - Reguly projektowe ustawiasz recznie (rozdzial 3); w Pro przez Net Class.
+ - Od wersji 0.17 elementy schematu i PCB maja wspolne identyfikatory (UniqueID / KiCad path),
+   wiec DRC nie powinno zglaszac "PCB and schematic netlist does not match". Otwory montazowe
+   MH* sa tylko na PCB (brak symbolu) - to normalne.
+ - Pliki nie byly testowane w EasyEDA.
+
+
+2. FOOTPRINTY - CO SPRAWDZIC PRZED ZAMOWIENIEM
+----------------------------------------------
+Footprinty sa wygenerowane i maja wymiary typowych elementow. Przed zamowieniem
+porownaj je z kartami katalogowymi konkretnych czesci albo podmien na footprinty
+z biblioteki LCSC w EasyEDA. Szczegolnie:
+  - przekazniki K1-K4 i na plytkach UL: Omron G2RL-2 - footprint z biblioteki KiCad, sprawdzony
+  - podstawki B9A (EF86, E88CC): okrag 11,89 mm, otwory 1,3 mm; sprawdz z Twoja podstawka
+  - ESP32-S3-DevKitC-1: rozstaw rzedow 22,86 mm; sprawdz na module
+  - sterowanie: uklady SMD (ADS1115, MCP4728, LM324, ULN2803) maja footprinty z bibliotek KiCad;
+    w EasyEDA mozesz je podmienic na footprinty z biblioteki LCSC (te same obudowy)
+  - kondensatory foliowe: rastry 5 / 10 / 15 / 22,5 / 27,5 mm (np. WIMA MKP4)
+  - snap-in: C130 D35, C1/C2 na zasilaczu HV D30; raster 10 mm
+  - R111/R112: pola pod rezystor 7 W (raster 35,56 mm) - pasuje tez 5 W
+  - C105/C106: prostopadloscienny raster 27,5 mm, korpus do 31,5 x 11 mm
+    (WIMA MKP4/MKP10, Kemet R76). Wiekszy kondensator audio (osiowy Mundorf, Jantzen,
+    Clarity Cap) montuj poza plytka - przykrec do obudowy i polacz krotkimi przewodami
+    do pol C105/C106.
+  - oprawka F2: zamknieta 5x20 do druku, raster 22,5 mm, korpus 28 x 10 mm
+  - oprawka F3: dwa zestawy pol na tych samych sieciach - 5x20 (raster 22,5 mm, korpus 28 x 10)
+    ALBO 6,3x32 (raster 30 mm, korpus do 40 x 12). Lutujesz tylko jedna oprawke.
+    Wymiary obu oprawek PRZYBLIZONE - sprawdz z wybrana oprawka; sprawdz tez jej
+    napiecie znamionowe (wiele oprawek do druku ma tylko 250 V AC, F3 pracuje na 360 V)
+  - TO-220 (Q101, U2): obrys radiatora 20 x 16 mm za obudowa tranzystora
+  - U2 (sterowanie): mini przetwornica step-down ze stalym 5 V, 4 piny w prostokacie
+    14,17 x 8,24 mm (557,9 x 324,4 mil): 1 -IN (GND), 2 +IN (+12V), 3 OUT+ (+5V), 4 OUT- (GND).
+Do sprawdzenia skali wydrukuj PDF "_1do1" w skali 100% i przyloz elementy.
+
+
+3. REGULY PROJEKTOWE - KLASY SIECI (ustaw recznie w EasyEDA)
+------------------------------------------------------------
+Miedz 1 oz. Te same tabele sa w 3_pakiet_awaryjny/<plytka>_klasy_sieci.csv.
+Sieci niewymienione -> klasa Default: sciezka 0,4 mm, odstep 0,3 mm.
+
+KLASY SA ZAPISANE W PLIKACH PCB (.kicad_pcb, sekcje net_class: szerokosc, odstep,
+przelotka, lista sieci). Nie wiadomo, czy import KiCad w EasyEDA je przenosi - dokumentacja
+tego nie opisuje. Po imporcie otworz menedzer klas sieci (Net Class) i regule projektowe:
+  - jesli klasy i wartosci sa - gotowe, sprawdz tylko odstepy do innych klas (kolumna
+    "Do innych klas" ponizej) - format KiCad 5 nie ma tabeli odstepow klasa<->klasa;
+  - jesli ich nie ma - wpisz recznie wedlug tabel ponizej.
+W KiCadzie (5.1 lub nowszym) klasy wczytuja sie zawsze.
+
+Jak ustawic w EasyEDA Pro:
+  a) Design > Net Class (menedzer klas sieci): utworz klasy i przypisz sieci.
+  b) Design > Design Rule: regula Track (szerokosc - autorouter bierze wartosc Default)
+     i Clearance (odstep) dla kazdej klasy.
+  c) Odstep zalezy od PARY sieci. Jesli regula Clearance ma tabele klasa<->klasa,
+     wpisz duze odstepy tylko tam, gdzie roznica napiec jest duza (kolumna
+     "do innych klas"). Bez tabeli ustaw kazdej klasie wartosc z kolumny "Odstep".
+  d) Route > Auto Routing: w Ignore Network wpisz GND (masa recznie / wylewka).
+     Najpierw recznie poprowadz i zablokuj (Lock) mase, zarzenie, 230 V i HV,
+     potem autorouter z zachowaniem istniejacych sciezek, na koniec DRC.
+
+PLYTKA KANALU
+  Klasa       Sciezka  Odstep  Do innych klas  Sieci
+  HV          0,6      2,5                     B+3 B+2
+  ANODA       0,5      1,25    2,5 do HV/BIAS  B+1 ANODE_A ANODE_B
+  HV_MID      0,4      1,0     2,5 do BIAS     A_EF TAIL G_A G_B N_GB G2_EF CC_MID STEP
+  BIAS        0,4      1,0     3,0 do HV/ANODA VBIAS BIAS_T BIAS_B BMID_T BMID_B GRID_T GRID_B
+  ZARZENIE    1,0      0,5                     HTR_A HTR_B
+  CZULE       0,4      0,3                     IN IN2 G1_EF K_EF FB
+  GND         1,0      0,3                     GND
+  - HV: 460-465 V. ANODA: 270-290 V. HV_MID: 73-150 V. BIAS: -25...-80 V.
+  - ANODA 1,25 mm (IPC-2221, zewnetrzne, do 300 V): pady podstawki noval maja miedzy soba
+    ok. 1,3 mm, wiec anoda obok masy (pin 9) i zarzenia (pin 5) przechodzi DRC.
+    Przy 2,5 mm DRC zglaszalby bledy w samej podstawce.
+  - GRID_T/GRID_B (siatki KT88) krotko i z dala od anod.
+  - ZARZENIE: ok. 0,6 A na elewacji +42 V; sciezki parami, obok siebie.
+  - CZULE: wejscie i petla NFB - najkrocej, obok masy, z dala od HV i zarzenia.
+  - Q_G, Q_S, RS_MID (2-4 V) zostaja w Default.
+  - Odstepy 2,5 mm tylko przy roznicy >200 V - przy takich zalozeniach rozmieszczono
+    elementy. 3 mm "do wszystkiego" da bledy DRC miedzy padami podstawek.
+
+ZASILACZ_SIEC (230 V, bias, zarzenie)
+  Klasa       Sciezka  Odstep  Do innych klas  Sieci
+  SIEC_230    2,0      3,0     6,0 do CEWKI    L_SW L_K1 L_TR N_SW
+  BIAS_AC     0,5      1,0                     B_AC1 B_AC2 VB_RAW VBIAS
+  ZARZENIE_3  2,0      0,5                     H3_A H3_B
+  ZARZENIE_2  0,5      0,5                     H2_A H2_B
+  ELEW        0,5      0,5                     HTR_ELEV
+  CEWKI       0,5      0,3     6,0 do SIEC_230 +12V RLY1 RLY2
+  GND         1,0      0,3                     GND
+  - SIEC_230: ok. 1,8 A + udar przy zalaczeniu.
+  - ZARZENIE_3: uzwojenie S3 rozdzielane na dwa kanaly, ok. 1,2 A.
+  - ZARZENIE_2: na plytce sa tylko R11/R12 (sztuczny srodek), prad 6,4 A KT88 idzie
+    przewodami. Jesli puscisz go przez plytke - sciezka 3,0 mm.
+
+ZASILACZ_HV
+  Klasa       Sciezka  Odstep  Do innych klas      Sieci
+  HT_AC       1,5      3,0     6,0 do CEWKI        HT_AC1 HT_AC2 HT_K3 K3_MID HT_IN
+  HV_DC       1,5      3,0     6,0 do CEWKI        HV_RAW B+3
+  HV_MID      0,6      2,0                         C1_MID C2_MID HVS1 HVS2
+  POMIAR      0,4      0,5     3,0 do HV_DC/HT_AC  HV_SENSE HTR_ELEV
+  CEWKI       0,5      0,3     6,0 do HT_AC/HV_DC  +12V RLY3 RLY4
+  GND_LAD     2,0      0,3                         GND
+  - HT_AC: 360 V AC (510 V szczytowo), impulsy pradu ladowania C1.
+  - HV_DC: 465-510 V; HV_RAW to petla ladowania, B+3 ok. 0,35 A.
+  - HV_MID: 155-255 V (srodki baterii kondensatorow, dzielnik pomiarowy).
+  - GND_LAD: powrot petli ladowania mostek -> C1B -> mostek; tu jest gwiazda J15.
+
+STEROWANIE
+  Klasa       Sciezka  Odstep  Sieci
+  WE_BIAS     0,4      1,5     VBIAS
+  ZASIL       0,8      0,3     +12V +5V
+  ANALOG      0,3      0,3     IK_L1F IK_L2F IK_R1F IK_R2F VB_F HV_F
+  GND         1,0      0,3     GND
+  - WE_BIAS: ok. -80 V wchodzi na plytke (J5-1 -> R5); krotko, z dala od 3V3 i ESP32.
+  - ANALOG: wejscia ADS1115 z dala od ESP32 i linii DRV/RLY.
+  KOREKTA     0,3      0,3     DAC_*, FB_*, OA_*, BF_* (MCP4728 -> LM324 -> filtr RC)
+  BIAS_KOR    0,3      1,5     S_* i BI_* (ok. -50 V, przesuwnik R23-R34 i J10)
+  - I2C, DRV1-6, RLY1-4, RLY_UL, enkoder, IR, DQ, MUTE, 3V3 - Default.
+
+PLYTKA UL
+  Klasa       Sciezka  Odstep  Do innych klas  Sieci
+  UL_HV       0,8      2,5     6,0 do CEWKI    AN_A UL_A G2_A AN_B UL_B G2_B
+  CEWKI       0,5      0,3     6,0 do UL_HV    +12V RLY_UL
+  - UL_HV: ok. 465 V stalego + sygnal (anoda do ok. 850 V szczytowo). Bez wylewki masy.
+
+BEZPIECZENSTWO
+  Odstepy 6 mm (230 V i HT <-> strona 12 V) to izolacja wzmocniona - strona 12 V
+  laczy sie z ESP32, enkoderem i wyswietlaczem. Traktuj je jako obowiazkowe,
+  a pod przekaznikami K1-K4, miedzy cewka a stykami, dodaj frezowany slot.
+  Pozostale odstepy sa funkcjonalne.
+Pod rezystorami 5-10 W i miedzy sieciami HV a reszta warto dodac frezowanie (slot).
+
+
+BEZPIECZNIKI
+  F1  T2,5A 250 V, zwloczny, 5x20 - w gniezdzie IEC (poza plytka): siec -> F1 -> SW1 -> J1/J2.
+      Toroid 400 VA pobiera ok. 1,74 A; udar przy wlaczeniu ogranicza R_SS (K2).
+  F2  T500mA 250 V, zwloczny, 5x20 - na plytce zasilacz_siec, przed PS1 (J3).
+      PS1 = Mean Well IRM-15-12 (12 V / 1,25 A, ok. 52 x 27 x 24 mm) - na plytce STEROWANIA.
+      Przewod 230 V: zasilacz_siec J3 -> sterowanie J1 (zlacze srubowe, gorna krawedz).
+      Strefa 230 V (J1 i wejscie PS1) jest w prawym gornym rogu; najblizsza miedz niskiego
+      napiecia jest ok. 7,9 mm dalej (wymagane 6 mm). Nie prowadz tam innych sciezek.
+      Footprint PS1 ma raster PRZYBLIZONY - podmien na footprint LCSC C6394169.
+      Wartosc F2 sprawdz w karcie IRM-15 (prad rozruchowy).
+  F3  T1A, zwloczny, NAPIECIE ZNAMIONOWE MIN. 400 V AC - na plytce zasilacz_siec,
+      w uzwojeniu S1 360 V, przed K3/R_IN/mostkiem. Chroni przed pozarem przy przebiciu
+      lampy lub kondensatora.
+      Dlaczego 1 A, a nie 500 mA: w uzwojeniu plynie prad skuteczny ok. 1,6-2x wiekszy
+      od pradu stalego (prostownik z kondensatorem), czyli 0,5-0,65 A przy 0,3-0,35 A DC.
+      T500mA przepalalby sie sam. T500mA pasuje dopiero za mostkiem (strona DC), ale tam
+      jest 510 V DC, a takie bezpieczniki 5x20 sa trudno dostepne.
+      Zwykle bezpieczniki 5x20 sa na 250 V - na S1 (360 V AC) nie przerwa pewnie zwarcia.
+      Szukaj ceramicznych 5x20 lub 6,3x32 na 400-500 V AC (sprawdz w karcie katalogowej;
+      footprint F3 przyjmuje oprawke 5x20 albo 6,3x32).
+
+
+ROZLADOWANIE KONDENSATOROW B+
+  C1 i C2 (po 2 x 470 uF szeregowo) sa polaczone przez dlawik L1 - razem ok. 470 uF.
+  Z wlozonymi lampami B+ spada w niecala sekunde. Z WYJETYMI lampami (serwis)
+  rozladowuja je tylko rezystory:
+    R3-R6 150k 1W (bylo 220k)   2 x 300k
+    R7-R10 dzielnik pomiarowy   3,0M
+    R140A/B + R141 elewacja     330k
+    R16 + R17 + LED HV          440k
+    plytki kanalow (R106/R107)  2 x 2M
+  Razem ok. 75k -> stala czasowa ok. 35 s, ponizej 50 V po ok. 80 s
+  (przy 220k: ok. 53 s i 2 minuty).
+  LED HV (D13, czerwona, wysokiej sprawnosci, ok. 1 mA przez 2 x 220k 1W) na plytce
+  zasilacz_hv: swieci, dopoki B+ > ok. 30-50 V. Gasnie przy kilkudziesieciu woltach,
+  wiec NIE ZASTEPUJE MIERNIKA. Przed dotknieciem czegokolwiek zawsze zmierz B+
+  (J11-J14 do J15) i w razie potrzeby rozladuj rezystorem 5-10 kOhm 5 W na izolowanych
+  przewodach.
+  Szybszy pasywny bleeder oznacza waty ciepla (tau 10 s = ok. 5 W stale). Rozwiazaniem
+  jest bleeder przelaczany przekaznikiem (zwiera B+ przez 10k 5W po wylaczeniu HV) -
+  nie zmiescil sie na plytce 10 x 10 cm (wyprowadzenia przekaznika trafialyby pod
+  kondensatory snap-in).
+  Oprogramowanie: ESP32 mierzy B+ (HV_SENSE) takze w czuwaniu - wyswietlaj ostrzezenie
+  "HV" na ekranie, dopoki B+ > 50 V.
+
+
+4. ZASADY PROWADZENIA
+---------------------
+ Kolejnosc: najpierw recznie (i zablokuj - Lock): HV/ANODA (B+, anody), masa, zarzenie;
+ potem autorouter dla reszty (w Ignore Network: GND, jesli masa ma byc wylewka).
+ - Masa gwiazdowa: punkt J15 (GND_STAR) na plytce zasilacza HV. Z kazdej plytki
+   kanalu jeden przewod GND (J105) do gwiazdy. Masa sterowania (J4/J5) do tego samego punktu.
+ - Plytka kanalu: R101, R103 i powrot FB (J103) lacza sie w jednym punkcie masy przy EF86.
+   Przewod FB prowadz skretka z masa wyjscia glosnikowego.
+ - Wylewka GND na B.Cu tylko w strefie wejscia (lewa czesc plytki kanalu), nie pod HV.
+ - Rezystory siatkowe (R102, R108, R110, R113) maja byc tuz przy nozkach.
+ - Petla ladowania: mostek D1-D4 -> C1A/C1B -> powrot do mostka jak najkrotsza.
+ - Zarzenie: sciezki parami, obok siebie; przewody skrecone.
+
+
+5. ZMIANA WZGLEDEM STRONY PROJEKTU
+----------------------------------
+Elewacja zarzenia (R140A/R140B) jest na plytce zasilacza brana z B+3 zamiast z B+2 kanalu L.
+R140 = 2 x 150k 1W szeregowo (bylo 270k 1W), R141 = 30k: daje 42,3 V przy B+3 465 V.
+Na calym R140 jest 423 V, a przy zimnych lampach (B+3 ok. 510 V) ok. 468 V - za duzo na jeden
+rezystor 1 W (napiecie graniczne zwykle 350 V, moc 0,66 W). Po podziale: ok. 212-234 V
+i 0,30-0,37 W na rezystor.
+Daje ok. +42 V jak poprzednio, a nie wymaga przewodu z plytki kanalu.
+Rezystory H3 (R13, R14 - 100R 1 W) tworza sztuczny srodek uzwojenia S3 do elewacji.
+
+
+5a. KOREKTA BIASU I PRZELACZNIK UL/TRIODA (sterowanie + plytki UL)
+--------------------------------------------------------------------
+Korekta biasu (U6 MCP4728, U7 LM324):
+  ESP32 -> I2C -> MCP4728 (adres 0x60, odniesienie = VDD 3,3 V) -> filtr 10k / 1 uF (R19-R22,
+  C13-C16) -> LM324 x3 (0-9,9 V) -> przesuwnik poziomu 68k (R23-R26) / 33k do szyny biasu
+  (R27-R30) -> 1k (R31-R34) -> J10 -> wezel biasu KT88 na plytce kanalu (TP106/TP107).
+  D9-D12 na wyjsciach LM324: bez 12 V wyjscie nie schodzi ponizej masy.
+  Przesuwnik daje zrodlo ok. -54 V (DAC = 0) ... -51 V (DAC max) przy szynie -80 V, czyli blisko
+  napiecia wezla - korekta malo zaweza zakres potencjometru. PLYTKA KANALU BEZ ZMIAN.
+  Obciazenie szyny biasu: ok. 0,9 mA na lampe (razem z kanalami i pomiarem ok. 7,3 mA);
+  dlatego R142 na zasilacz_siec = 1k (bylo 1k5): szyna ok. -80 V (siec -10%: -71 V, +10%: -89 V).
+  Wyliczenia (wezel kanalu: 27k do szyny, 27k + P102 0-50k do masy):
+    zakres potencjometru z dolaczona korekta (DAC w polowie): ok. -45 V (P=0) ... -56 V (P=50k)
+    (bez korekty -40 ... -59 V);
+    zakres korekty: ok. 1,2-1,5 V, czyli ok. +-0,6-0,75 V = ok. +-6 mA pradu KT88.
+  Jesli ktoras KT88 potrzebuje biasu bardziej ujemnego niz ok. -56 V: zmien R119/R120 na
+  plytce kanalu z 27k na 24k (ta sama obudowa).
+  Uruchomienie: DAC w polowie (ok. 1,65 V na wyjsciu MCP4728), z PODLACZONYM J10
+  ustaw potencjometrami P102/P103 ok. 55 mA na lampe; dopiero potem wlacz automat.
+  Po wlaczeniu zasilania MCP4728 laduje wartosc z wlasnej pamieci EEPROM (fabrycznie 0 V =
+  bias najbardziej ujemny, czyli bezpiecznie) - program moze tam zapisywac ostatnie ustawienie.
+  BEZPIECZENSTWO:
+   - awaria ESP32 / LM324 (wyjscie 0 V albo nasycone ok. 10,5 V) przesuwa bias najwyzej
+     o ok. 0,85 V;
+   - brak 12 V: wyjscie LM324 ok. 0 V (D9-D12) - bias ok. 0,8 V chlodniej;
+   - PRZERWANY PRZEWOD J10: bias wraca do wartosci z samego potencjometru - przy P blisko
+     maksimum chlodniej, ale przy potencjometrze skreconym do konca (P=0) do ok. 4,5 V cieplej.
+     Dlatego w programie ustaw alarm i wylaczenie anod (K3), gdy prad spoczynkowy lampy
+     > ok. 75 mA (obecny prog 130 mA zostaje jako ostatnia linia).
+  Program (propozycja): koryguj tylko w ciszy (prady stabilne przez 30-60 s), malymi krokami;
+  najpierw wyrownaj pare (roznica < 1 mA), potem dociagnij do 55 mA; zapamietuj ustawienia;
+  jesli DAC dochodzi do konca zakresu - komunikat "lampa do wymiany / przestaw potencjometr".
+
+Przelacznik UL/trioda (plytki UL, U3 wyjscie 6 -> J11, ESP32 GPIO17):
+  Na kazda KT88 jeden G2RL-2 (oba styki rownolegle). Bez zasilania cewki: G2 <- odczep UL
+  (normalny tryb UL); cewka zasilona: G2 <- anoda (trioda, ok. 20-25 W).
+  J1/J2 plytki UL (7,62 mm): 1 anoda KT88, 2 odczep UL transformatora, 3 do G2 - przez
+  rezystor siatki ekranowej R123/R124 270R 2W przy nozce 4 podstawki (zostaje jak byl).
+  PRZELACZAC TYLKO PRZY WYLACZONYM B+: ESP32 wylacza K3/K4, czeka az B+ (HV_SENSE) < 30 V,
+  przelacza RLY_UL, wlacza z powrotem. W chwili przeskoku styku siatka G2 wisi w powietrzu.
+  Plytka UL: bez masy; otwory M3 (MH1-MH3) mocuj na tulejach izolacyjnych / nylonowych.
+
+Montaz SMD w JLCPCB (plytka sterowania):
+  4_montaz_SMD_JLCPCB/sterowanie_BOM_JLCPCB.csv - BOM w formacie JLCPCB (Comment, Designator,
+  Footprint, LCSC Part #), tylko elementy SMD. Plik pozycji (CPL) wygeneruj w EasyEDA PO
+  rozmieszczeniu i routingu (pozycje zmienia sie przy routingu). W EasyEDA Pro mozesz tez
+  zamowic montaz bezposrednio z edytora - wtedy przypisz czesci LCSC (pole "Supplier Part"
+  jest juz w symbolach schematu - sprawdz, czy import je przeniosl).
+  Czesci "Extended" (oplata za zaladowanie podajnika, kilka USD za typ): ULN2803G-S18-R C33924 (UTC, sprawdz typ),
+  ADS1115IDGSR C37593, MCP4728-E/UN C108207, LM324DR C7943. Rezystory 0805, kondensatory
+  i 1N4148W - "Basic"; rezystory 1206 (22k C25830, 330k C17929) - sprawdz przy zamowieniu.
+  Przewlekane (ESP32 na listwach, PS1, U2, C1/C2, zlacza) lutujesz sam.
+  Stan magazynowy sprawdz przy zamowieniu.
+
+5c. PRZELACZNIK GLOSNIKOW I WEJSCIE TRIGGER
+--------------------------------------------
+Plytka GLOSNIKI: na kanal jeden G2RL-2, oba bieguny przelaczane (wyjscia Marantza i Lampy
+nigdy nie sa ze soba polaczone - minus Marantza NIE laczy sie z masa Lampy).
+  J1 / J4  z Marantza (L / R): 1 +, 2 -       (zaciski "Z MARANTZA" na tylnej sciance, gorny rzad)
+  J2 / J5  z Lampy: 1 odczep 4 Ohm T101/T201, 2 COM (R127 100R 2W zostaje na zaciskach wtornego TG)
+  J3 / J6  do kolumn: 1 +, 2 -                (zaciski "DO KOLUMN", dolny rzad)
+  J7       cewki: z plytki sterowania J13 (+12 V, RLY_SPK)
+  Bez pradu cewek (Lampa wylaczona, ESP32 nie dziala): kolumny <- Marantz. Bezpiecznie.
+  Przewody: 1,5 mm2. Sciezki na plytce 2 mm (klasa GLOSNIK) - najlepiej po obu stronach.
+Wejscie TRIGGER (sterowanie J12): gniazdo jack 3,5 mm MONO na tylnej sciance, korpus plastikowy
+  - tulejka gniazda nie moze dotykac obudowy (masa Marantza ma zostac oddzielona). Koncowka (+12 V)
+  -> J12.1, tulejka -> J12.2. Kabel jack-jack 3,5 mm mono do TRIGGER OUT w SR7013; w menu SR7013
+  przypisz trigger do wejscia/strefy, przy ktorej ma grac Lampa.
+  TRIG_IN (GPIO1) = 0, gdy Marantz podaje 12 V.
+Sekwencja w ESP32:
+  wlaczenie (przycisk, pilot albo trigger): kolumny zostaja na Marantzu przez nagrzewanie
+  i stabilizacje biasu (ok. 60 s) -> MUTE -> RLY_SPK on -> 0,5 s -> MUTE off;
+  wylaczenie / standby / zanik triggera: MUTE -> RLY_SPK off -> anody off;
+  alarm (prad lampy, bias, temperatura): od razu RLY_SPK off i MUTE.
+  Przy triggerze z Marantza mozna od razu wybrac wejscie pre-out i stala glosnosc (tryb kina domowego).
+
+5b. ZAMOWIENIE CZESCI (folder 5_BOM_czesci_LCSC)
+------------------------------------------------
+  <plytka>_BOM_LCSC.xlsx  - elementy przewlekane kazdej plytki osobno; kolumna "Ilosc razem"
+                            uwzglednia 2 plytki kanalu i 2 plytki UL.
+  poza_plytkami_BOM.xlsx  - elementy przy podstawkach KT88 i w obudowie (bez transformatorow).
+  Wszystkie numery LCSC wybrane sposrod czesci DOSTEPNYCH na magazynie wg bazy katalogu JLCPCB/LCSC
+  (jlcparts, stan z 25.10.2026) - kolumna "Stan mag.". Wiersze pomaranczowe = brak w LCSC, kup w TME /
+  sklepie lampowym: DN2540N5-G (TO-220), rezystory 27k 5 W (R111/R112), podstawki B9A i octal,
+  oprawka i bezpiecznik F3 na min. 400 V AC, C108 2,7 pF (opcja), ESP32, przetwornica 5 V, gniazdo IEC.
+  Zmiany wymuszone dostepnoscia (bez zmian footprintow):
+   - C1A-C2B: 470 uF / 450 V D30 x 50 (wysokosc 50 mm);
+   - rezystory 27k, 220k, 1M2, 1M5 w wersji 0,25 W (wystarczy - male napiecia i moce);
+   - R7-R9: 1 MOhm 1 W 4 kV (RCR60) zamiast Vishay VR37;
+   - C103: start od 100 pF SL 1 kV (120 pF HV przewlekanego brak), docelowo mikowy z TME;
+   - R1/R2: rezystory drutowe 10 W 9 x 36,5 mm (w polach 55,88 mm - nozki odgiac).
+  Elementy SMD plytki sterowania sa w 4_montaz_SMD_JLCPCB (montuje JLCPCB).
+  Przed zamowieniem sprawdz minimalne ilosci (rezystory czesto po 10-20 szt.) i stany.
+  ULN2803G-S18-R (UTC, SOP-18): sprawdz w karcie, ze obudowa ma 7,5 mm szerokosci (jak SOIC-18W)
+  i standardowy uklad nozek (1-8 wejscia, 9 GND, 10 COM, 11-18 wyjscia).
+
+6. PAKIET AWARYJNY (folder 3_pakiet_awaryjny)
+---------------------------------------------
+  <plytka>_BOM.csv                - elementy, wartosci, footprinty, pozycje X/Y [mm]
+  <plytka>_netlista.csv           - wszystkie sieci z listami polaczen (element-pin)
+  <plytka>_klasy_sieci.csv        - klasy sieci: szerokosc sciezki, odstepy (rozdzial 3)
+  <plytka>_rozmieszczenie.png/svg - rysunek rozmieszczenia (czerwone pady = wysokie napiecie)
+  <plytka>_rozmieszczenie_1do1.pdf - do wydruku w skali 100%
+Pliki CSV maja separator ";" (Excel PL otworzy je poprawnie).
+
+Numeracja nozek:
+  EF86: 1 G2, 2 ekran, 3 K, 4-5 zarzenie, 6 A, 7 ekran, 8 G3, 9 G1
+  E88CC: 1 A1, 2 G1, 3 K1, 4-5 zarzenie, 6 A2, 7 G2, 8 K2, 9 ekran
+  DN2540N5 (TO-220): 1 G, 2 D, 3 S
+  Dioda: pin 1 = katoda (kwadratowy pad)
+  Elektrolit: pin 1 = plus (kwadratowy pad)
+  Przekaznik G2RL-2: 1 i 8 cewka; tor 1: 3 wspolny, 2 NC, 4 NO; tor 2: 6 wspolny, 7 NC, 5 NO
+  ADS1115 / MCP4728 (MSOP-10), LM324 (SOIC-14), ULN2803 (SOIC-18): numeracja standardowa,
+  pin 1 oznaczony na sitodruku obudowy

@@ -1,0 +1,15 @@
+﻿Oznaczenie;Wartosc;Footprint;Strona;X [mm];Y [mm];Grupa;LCSC;Uwagi
+K1;G2RL-2-DC12;Relay_DPDT_Omron_G2RL;GORA;30.00;28.00;PRZEKAZNIKI GLOSNIKOW;C61458;"kanal L: bez pradu cewki kolumna <- Marantz (NC), cewka zasilona: kolumna <- Lampa (NO); + i - przelaczane"
+K2;G2RL-2-DC12;Relay_DPDT_Omron_G2RL;GORA;72.00;28.00;PRZEKAZNIKI GLOSNIKOW;C61458;"kanal R: bez pradu cewki kolumna <- Marantz (NC), cewka zasilona: kolumna <- Lampa (NO); + i - przelaczane"
+D1;1N4148;D_DO-35_P7.62;GORA;13.00;38.00;PRZEKAZNIKI GLOSNIKOW;;dioda cewki K1
+D2;1N4148;D_DO-35_P7.62;GORA;62.00;38.50;PRZEKAZNIKI GLOSNIKOW;;dioda cewki K2
+J1;MARANTZ_L;TerminalBlock_1x02_P5.08;GORA;12.00;5.00;ZLACZA;;z wyjscia glosnikowego Marantza, kanal L: 1 +, 2 -
+J2;LAMPA_L;TerminalBlock_1x02_P5.08;GORA;27.00;5.00;ZLACZA;;z wtornego T101: 1 odczep 4 Ohm, 2 COM (masa Lampy)
+J3;KOLUMNA_L;TerminalBlock_1x02_P5.08;GORA;42.00;5.00;ZLACZA;;do zaciskow kolumny L na tylnej sciance: 1 +, 2 -
+J4;MARANTZ_R;TerminalBlock_1x02_P5.08;GORA;58.00;5.00;ZLACZA;;z Marantza, kanal R
+J5;LAMPA_R;TerminalBlock_1x02_P5.08;GORA;73.00;5.00;ZLACZA;;z wtornego T201: 1 odczep 4 Ohm, 2 COM
+J6;KOLUMNA_R;TerminalBlock_1x02_P5.08;GORA;88.00;5.00;ZLACZA;;do zaciskow kolumny R
+J7;CEWKI;PinHeader_1x02_P2.54;GORA;95.50;36.00;ZLACZA;;z plytki sterowania J13
+MH1;M3;MountingHole_M3;GORA;4.50;37.50;OTWORY;;
+MH2;M3;MountingHole_M3;GORA;51.00;37.50;OTWORY;;
+MH3;M3;MountingHole_M3;GORA;95.50;22.00;OTWORY;;

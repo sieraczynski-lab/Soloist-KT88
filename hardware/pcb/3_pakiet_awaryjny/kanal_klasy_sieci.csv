@@ -1,0 +1,9 @@
+﻿Klasa;Szerokosc [mm];Odstep [mm];Odstep do innych klas;Sieci;Uwagi
+HV;0,6;2,5;;B+3 B+2;460-465 V, kilkanascie mA
+ANODA;0,5;1,25;2,5 do HV i BIAS;B+1 ANODE_A ANODE_B;"270-290 V; 1,25 mm = IPC-2221 do 300 V, miesci sie miedzy nozkami podstawki"
+HV_MID;0,4;1,0;2,5 do BIAS;A_EF TAIL G_A G_B N_GB G2_EF CC_MID STEP;73-150 V
+BIAS;0,4;1,0;3,0 do HV/ANODA;VBIAS BIAS_T BIAS_B BMID_T BMID_B GRID_T GRID_B;"-25...-78 V; GRID_T/B krotko, z dala od anod"
+ZARZENIE;1,0;0,5;;HTR_A HTR_B;"ok. 0,6 A, +42 V; parami obok siebie"
+CZULE;0,4;0,3;;IN IN2 G1_EF K_EF FB;wejscie i NFB: krotko, przy masie, z dala od HV i zarzenia
+GND;1,0;0,3;;GND;albo wylewka w strefie wejscia
+Default;0,4;0,3;;(pozostale sieci);

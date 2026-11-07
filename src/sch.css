@@ -1,0 +1,33 @@
+svg.sch{display:block;max-width:none;height:auto;font-family:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace}
+svg.sch .w{fill:none;stroke:var(--ink);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+svg.sch .w.opt,svg.sch .body.opt,svg.sch .plate.opt{stroke-dasharray:4 3;opacity:.6}
+svg.sch .erase{stroke:var(--paper);stroke-width:5}
+svg.sch .dot{fill:var(--ink)}
+svg.sch .term{fill:var(--paper);stroke:var(--ink);stroke-width:1.5}
+svg.sch .body{fill:var(--paper);stroke:var(--ink);stroke-width:1.6}
+svg.sch .plate{fill:none;stroke:var(--ink);stroke-width:2.6;stroke-linecap:round}
+svg.sch .env{fill:var(--panel);stroke:var(--ink);stroke-width:1.6}
+svg.sch .anode{stroke:var(--ink);stroke-width:4}
+svg.sch .grid{stroke:var(--ink);stroke-width:1.6;stroke-dasharray:3.5 3}
+svg.sch .beamp{fill:none;stroke:var(--ink);stroke-width:1.2;stroke-dasharray:2 2}
+svg.sch .core{stroke:var(--ink);stroke-width:2}
+svg.sch .shield{stroke:var(--muted);stroke-width:1.4;stroke-dasharray:6 4}
+svg.sch .mech{stroke:var(--muted);stroke-width:1.2;stroke-dasharray:3 3}
+svg.sch .diode{fill:var(--ink);stroke:var(--ink);stroke-width:1}
+svg.sch .arrowhead{fill:var(--ink)}
+svg.sch .grp{fill:none;stroke:var(--accent);stroke-width:1.3;stroke-dasharray:7 5}
+svg.sch .blk{fill:var(--panel);stroke:var(--ink);stroke-width:1.3}
+svg.sch .blk.hi{stroke:var(--accent);stroke-width:2}
+svg.sch .blk.hvb{stroke:var(--hv);stroke-dasharray:6 4}
+svg.sch text{fill:var(--ink)}
+svg.sch .ref{font-size:12px;font-weight:600}
+svg.sch .val{font-size:12px;fill:var(--muted)}
+svg.sch .hv{font-size:12px;fill:var(--hv);font-weight:600}
+svg.sch .rail{font-size:12.5px;font-weight:600}
+svg.sch .tref{font-size:13.5px;font-weight:700}
+svg.sch .ttyp{font-size:12.5px;fill:var(--muted)}
+svg.sch .tiny{font-size:10px;fill:var(--muted)}
+svg.sch .note{font-size:11.5px;fill:var(--muted);font-style:italic}
+svg.sch .pl{font-size:12px;font-weight:700}
+svg.sch .btitle{font-size:14px;font-weight:700}
+svg.sch .bline{font-size:12px;fill:var(--muted)}

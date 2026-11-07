@@ -1,0 +1,35 @@
+﻿Oznaczenie;Wartosc;Footprint;Strona;X [mm];Y [mm];Grupa;LCSC;Uwagi
+J1;SIEC;TerminalBlock_1x02_P5.08_V;GORA;5.00;18.00;SIEC 230 V;;zlacze srubowe: 1 L (po F1 w gniezdzie IEC i SW1), 2 N
+J3;TR2;TerminalBlock_1x02_P5.08_V;GORA;5.00;37.00;SIEC 230 V;;zlacze srubowe: zasilanie czuwania PS1 (Mean Well IRM-15-12), 1 L (za F2), 2 N
+F2;T500mA 250V;Fuseholder_5x20_Closed_P22.5;GORA;66.00;9.00;SIEC 230 V;;bezpiecznik PS1 (IRM-15-12), zwloczny 5x20 - sprawdz zalecenie w karcie modulu
+J38;S1_HT;TerminalBlock_1x02_P7.62_V;GORA;94.50;38.00;SIEC 230 V;;zlacze srubowe 7,62 mm min. 400 V: 1 z TR1 S1, 2 do plytki HV J7
+F3;T1A 500V;Fuseholder_5x20_P22.5_or_6.3x32_P30;GORA;66.00;26.00;SIEC 230 V;;"bezpiecznik anodowy w uzwojeniu S1; napiecie znamionowe >= 400 V AC; oprawka 5x20 lub 6,3x32"
+K1;G2RL-2-DC12;Relay_DPDT_Omron_G2RL;GORA;25.00;12.00;SIEC 230 V;C61458;"siec; Omron G2RL-2 12 V, 2 styki rownolegle (LCSC C61458)"
+K2;G2RL-2-DC12;Relay_DPDT_Omron_G2RL;GORA;25.00;30.00;SIEC 230 V;C61458;"bocznik R_SS; Omron G2RL-2, 2 styki rownolegle"
+R1;47R 10W;R_Cement_10W_P55.88;GORA;52.00;45.00;SIEC 230 V;;R_SS, rezystor cementowy
+J5;TR1_PRI;TerminalBlock_1x02_P5.08_V;GORA;95.00;18.00;SIEC 230 V;;zlacze srubowe: uzwojenie pierwotne TR1, 1 L, 2 N
+J19;BIAS_AC;TerminalBlock_1x02_P5.08_V;GORA;5.00;64.00;BIAS -78 V;;zlacze srubowe: S4 65 V
+D5;1N4007;D_DO-41_P10.16_V;GORA;14.00;62.00;BIAS -78 V;;
+D6;1N4007;D_DO-41_P10.16_V;GORA;20.00;62.00;BIAS -78 V;;
+D7;1N4007;D_DO-41_P10.16_V;GORA;26.00;62.00;BIAS -78 V;;
+D8;1N4007;D_DO-41_P10.16_V;GORA;32.00;62.00;BIAS -78 V;;
+C141;100u/160V;CP_Radial_D12.5_P5;GORA;42.00;62.00;BIAS -78 V;;+ do masy
+R142;1k 1W;R_Axial_1W_P15.24_V;GORA;52.00;62.00;BIAS -78 V;;1k (bylo 1k5): szyna ok. -80 V przy obciazeniu ok. 7 mA (z korekta biasu)
+C142;100u/160V;CP_Radial_D12.5_P5;GORA;62.00;62.00;BIAS -78 V;;+ do masy
+J21;-78V;TerminalBlock_1x03_P5.08_V;GORA;78.00;65.00;BIAS -78 V;;zlacze srubowe: 1 kanal L, 2 kanal R, 3 sterowanie J5
+J24;H2;TerminalBlock_1x02_P5.08_V;GORA;5.00;84.00;ZARZENIE;;zlacze srubowe: S2 6,3 V/7 A - tylko odczep, przewody KT88 poza plytka
+R11;100R 1W;R_Axial_1W_P15.24_V;GORA;14.00;84.00;ZARZENIE;;sztuczny srodek
+R12;100R 1W;R_Axial_1W_P15.24_V;GORA;20.00;84.00;ZARZENIE;;
+J26;H3_IN;TerminalBlock_1x02_P5.08;GORA;34.00;95.00;ZARZENIE;;zlacze srubowe: S3 6,3 V/3 A
+R13;100R 1W;R_Axial_1W_P15.24_V;GORA;34.00;80.00;ZARZENIE;;
+R14;100R 1W;R_Axial_1W_P15.24_V;GORA;40.00;80.00;ZARZENIE;;
+J28;H3_KAN_L;TerminalBlock_1x02_P5.08;GORA;65.00;95.00;ZARZENIE;;zlacze srubowe: zarzenie kanalu L
+J30;H3_KAN_R;TerminalBlock_1x02_P5.08;GORA;79.00;95.00;ZARZENIE;;zlacze srubowe: zarzenie kanalu R
+J32;RELAY_A;PinHeader_1x03_P2.54;GORA;88.00;80.00;CEWKI K1/K2;;z plytki sterowania (J2 piny 1,2,3)
+D9;1N4148;D_DO-35_P7.62_V;GORA;82.00;82.00;CEWKI K1/K2;;
+D10;1N4148;D_DO-35_P7.62_V;GORA;78.00;82.00;CEWKI K1/K2;;
+J34;Z_HV;TerminalBlock_1x02_P5.08;GORA;50.00;95.00;ZLACZA;;zlacze srubowe: 1 +42 V z plytki HV J36, 2 GND z plytki HV J37 (gwiazda)
+MH1;M3;MountingHole_M3;GORA;4.50;4.50;OTWORY;;
+MH2;M3;MountingHole_M3;GORA;95.50;4.50;OTWORY;;
+MH3;M3;MountingHole_M3;GORA;4.50;95.50;OTWORY;;
+MH4;M3;MountingHole_M3;GORA;95.50;95.50;OTWORY;;

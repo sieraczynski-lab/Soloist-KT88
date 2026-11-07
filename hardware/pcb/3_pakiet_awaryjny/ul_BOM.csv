@@ -1,0 +1,11 @@
+﻿Oznaczenie;Wartosc;Footprint;Strona;X [mm];Y [mm];Grupa;LCSC;Uwagi
+K1;G2RL-2-DC12;Relay_DPDT_Omron_G2RL;GORA;24.00;12.50;PRZEKAZNIKI UL/TRIODA;C61458;"lampa A (V103/V203): bez zasilania cewki G2 <- odczep UL (tryb UL); zasilona: G2 <- anoda (trioda)"
+K2;G2RL-2-DC12;Relay_DPDT_Omron_G2RL;GORA;24.00;35.50;PRZEKAZNIKI UL/TRIODA;C61458;lampa B (V104/V204)
+D1;1N4148;D_DO-35_P7.62_V;GORA;12.00;24.00;PRZEKAZNIKI UL/TRIODA;;dioda cewki K1
+D2;1N4148;D_DO-35_P7.62;GORA;22.00;24.00;PRZEKAZNIKI UL/TRIODA;;dioda cewki K2
+J1;LAMPA_A;TerminalBlock_1x03_P7.62_V;GORA;66.00;12.50;ZLACZA;;zlacze srubowe 7,62 mm: 1 anoda KT88 A, 2 odczep UL transformatora, 3 do G2 (pin 4) przez R123/R124 270R 2W przy podstawce
+J2;LAMPA_B;TerminalBlock_1x03_P7.62_V;GORA;66.00;35.50;ZLACZA;;jak J1, lampa B
+J3;CEWKI;TerminalBlock_1x02_P5.08_V;GORA;5.50;24.00;ZLACZA;;z plytki sterowania J11 (1-2 kanal L, 3-4 kanal P)
+MH1;M3;MountingHole_M3;GORA;4.50;4.50;OTWORY;;
+MH2;M3;MountingHole_M3;GORA;4.50;43.50;OTWORY;;
+MH3;M3;MountingHole_M3;GORA;48.00;24.00;OTWORY;;

@@ -1,0 +1,9 @@
+﻿Siec;Polaczenia (element-pin)
++12V;K1-1 K2-1 D1-1 D2-1 J3-1
+AN_A;K1-4 K1-5 J1-1
+AN_B;K2-4 K2-5 J2-1
+G2_A;K1-3 K1-6 J1-3
+G2_B;K2-3 K2-6 J2-3
+RLY_UL;K1-8 K2-8 D1-2 D2-2 J3-2
+UL_A;K1-2 K1-7 J1-2
+UL_B;K2-2 K2-7 J2-2

@@ -1,0 +1,652 @@
+EESchema Schematic File Version 2
+LIBS:soloist88
+EELAYER 25 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 1
+Title "Soloist 88 - zasilacz: siec, bias, zarzenie"
+Date ""
+Rev "0.4"
+Comp ""
+Comment1 "Soloist 88 Stereo"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CONNR_2 J1
+U 1 1 5A91B54A
+P 850 2050
+F 0 "J1" H 750 1810 50  0000 L CNN
+F 1 "SIEC" H 750 1890 50  0000 L CNN
+F 2 "soloist88:TerminalBlock_1x02_P5.08_V" H 850 2050 50  0001 C CNN
+F 3 "" H 850 2050 50  0001 C CNN
+	1    850 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONNR_2 J3
+U 1 1 549FD466
+P 350 2350
+F 0 "J3" H 250 2110 50  0000 L CNN
+F 1 "TR2" H 250 2190 50  0000 L CNN
+F 2 "soloist88:TerminalBlock_1x02_P5.08_V" H 350 2350 50  0001 C CNN
+F 3 "" H 350 2350 50  0001 C CNN
+	1    350 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L FUSE_H F2
+U 1 1 5F2DABFC
+P 950 2300
+F 0 "F2" H 870 2240 50  0000 L CNN
+F 1 "T500mA 250V" H 870 2390 50  0000 L CNN
+F 2 "soloist88:Fuseholder_5x20_Closed_P22.5" H 950 2300 50  0001 C CNN
+F 3 "" H 950 2300 50  0001 C CNN
+	1    950 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L RELAY_G2RL K1
+U 1 1 538A840B
+P 2600 2600
+F 0 "K1" H 2350 2090 50  0000 L CNN
+F 1 "G2RL-2-DC12" H 2350 2170 50  0000 L CNN
+F 2 "soloist88:Relay_DPDT_Omron_G2RL" H 2600 2600 50  0001 C CNN
+F 3 "" H 2600 2600 50  0001 C CNN
+F 4 "LCSC" H 2600 2600 50  0001 C CNN "Supplier"
+F 5 "C61458" H 2600 2600 50  0001 C CNN "Supplier Part"
+	1    2600 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L RH R1
+U 1 1 588A2D13
+P 4100 2500
+F 0 "R1" H 4040 2440 50  0000 L CNN
+F 1 "47R 10W" H 4040 2570 50  0000 L CNN
+F 2 "soloist88:R_Cement_10W_P55.88" H 4100 2500 50  0001 C CNN
+F 3 "" H 4100 2500 50  0001 C CNN
+	1    4100 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 J5
+U 1 1 5DFC7153
+P 5450 2550
+F 0 "J5" H 5300 2310 50  0000 L CNN
+F 1 "TR1_PRI" H 5300 2390 50  0000 L CNN
+F 2 "soloist88:TerminalBlock_1x02_P5.08_V" H 5450 2550 50  0001 C CNN
+F 3 "" H 5450 2550 50  0001 C CNN
+	1    5450 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L RELAY_G2RL K2
+U 1 1 5A83D5B1
+P 4100 3500
+F 0 "K2" H 3850 2990 50  0000 L CNN
+F 1 "G2RL-2-DC12" H 3850 3070 50  0000 L CNN
+F 2 "soloist88:Relay_DPDT_Omron_G2RL" H 4100 3500 50  0001 C CNN
+F 3 "" H 4100 3500 50  0001 C CNN
+F 4 "LCSC" H 4100 3500 50  0001 C CNN "Supplier"
+F 5 "C61458" H 4100 3500 50  0001 C CNN "Supplier Part"
+	1    4100 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONNR_2 J38
+U 1 1 5E250CAA
+P 6350 2550
+F 0 "J38" H 6250 2310 50  0000 L CNN
+F 1 "S1_HT" H 6250 2390 50  0000 L CNN
+F 2 "soloist88:TerminalBlock_1x02_P7.62_V" H 6350 2550 50  0001 C CNN
+F 3 "" H 6350 2550 50  0001 C CNN
+	1    6350 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L FUSE_H F3
+U 1 1 582A9B6A
+P 7000 2500
+F 0 "F3" H 6920 2440 50  0000 L CNN
+F 1 "T1A 500V" H 6920 2590 50  0000 L CNN
+F 2 "soloist88:Fuseholder_5x20_P22.5_or_6.3x32_P30" H 7000 2500 50  0001 C CNN
+F 3 "" H 7000 2500 50  0001 C CNN
+	1    7000 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONNR_2 J19
+U 1 1 5B145EBE
+P 850 6050
+F 0 "J19" H 750 5810 50  0000 L CNN
+F 1 "BIAS_AC" H 750 5890 50  0000 L CNN
+F 2 "soloist88:TerminalBlock_1x02_P5.08_V" H 850 6050 50  0001 C CNN
+F 3 "" H 850 6050 50  0001 C CNN
+	1    850 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L D_V D5
+U 1 1 537F5CDD
+P 2000 5700
+F 0 "D5" H 2070 5680 50  0000 L CNN
+F 1 "1N4007" H 2070 5760 50  0000 L CNN
+F 2 "soloist88:D_DO-41_P10.16_V" H 2000 5700 50  0001 C CNN
+F 3 "" H 2000 5700 50  0001 C CNN
+	1    2000 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L D_V D7
+U 1 1 5D713DF1
+P 2000 6300
+F 0 "D7" H 2070 6280 50  0000 L CNN
+F 1 "1N4007" H 2070 6360 50  0000 L CNN
+F 2 "soloist88:D_DO-41_P10.16_V" H 2000 6300 50  0001 C CNN
+F 3 "" H 2000 6300 50  0001 C CNN
+	1    2000 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L D_V D6
+U 1 1 5A760D67
+P 2600 5700
+F 0 "D6" H 2670 5680 50  0000 L CNN
+F 1 "1N4007" H 2670 5760 50  0000 L CNN
+F 2 "soloist88:D_DO-41_P10.16_V" H 2600 5700 50  0001 C CNN
+F 3 "" H 2600 5700 50  0001 C CNN
+	1    2600 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L D_V D8
+U 1 1 5DCE2060
+P 2600 6300
+F 0 "D8" H 2670 6280 50  0000 L CNN
+F 1 "1N4007" H 2670 6360 50  0000 L CNN
+F 2 "soloist88:D_DO-41_P10.16_V" H 2600 6300 50  0001 C CNN
+F 3 "" H 2600 6300 50  0001 C CNN
+	1    2600 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP C141
+U 1 1 57B854A5
+P 3500 6450
+F 0 "C141" H 3600 6430 50  0000 L CNN
+F 1 "100u/160V" H 3600 6510 50  0000 L CNN
+F 2 "soloist88:CP_Radial_D12.5_P5" H 3500 6450 50  0001 C CNN
+F 3 "" H 3500 6450 50  0001 C CNN
+	1    3500 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L RH R142
+U 1 1 561435E5
+P 4000 6600
+F 0 "R142" H 3940 6540 50  0000 L CNN
+F 1 "1k 1W" H 3940 6670 50  0000 L CNN
+F 2 "soloist88:R_Axial_1W_P15.24_V" H 4000 6600 50  0001 C CNN
+F 3 "" H 4000 6600 50  0001 C CNN
+	1    4000 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP C142
+U 1 1 5EB1051F
+P 4500 6450
+F 0 "C142" H 4600 6430 50  0000 L CNN
+F 1 "100u/160V" H 4600 6510 50  0000 L CNN
+F 2 "soloist88:CP_Radial_D12.5_P5" H 4500 6450 50  0001 C CNN
+F 3 "" H 4500 6450 50  0001 C CNN
+	1    4500 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_3 J21
+U 1 1 5EE2854F
+P 5500 6700
+F 0 "J21" H 5350 6410 50  0000 L CNN
+F 1 "-78V" H 5350 6490 50  0000 L CNN
+F 2 "soloist88:TerminalBlock_1x03_P5.08_V" H 5500 6700 50  0001 C CNN
+F 3 "" H 5500 6700 50  0001 C CNN
+	1    5500 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONNR_2 J24
+U 1 1 5E8871C0
+P 6350 5850
+F 0 "J24" H 6250 5610 50  0000 L CNN
+F 1 "H2" H 6250 5690 50  0000 L CNN
+F 2 "soloist88:TerminalBlock_1x02_P5.08_V" H 6350 5850 50  0001 C CNN
+F 3 "" H 6350 5850 50  0001 C CNN
+	1    6350 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R11
+U 1 1 57FA2444
+P 7200 6050
+F 0 "R11" H 7260 6030 50  0000 L CNN
+F 1 "100R 1W" H 7260 6110 50  0000 L CNN
+F 2 "soloist88:R_Axial_1W_P15.24_V" H 7200 6050 50  0001 C CNN
+F 3 "" H 7200 6050 50  0001 C CNN
+	1    7200 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R12
+U 1 1 5EF375FE
+P 7600 6050
+F 0 "R12" H 7660 6030 50  0000 L CNN
+F 1 "100R 1W" H 7660 6110 50  0000 L CNN
+F 2 "soloist88:R_Axial_1W_P15.24_V" H 7600 6050 50  0001 C CNN
+F 3 "" H 7600 6050 50  0001 C CNN
+	1    7600 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONNR_2 J26
+U 1 1 508610EC
+P 6350 7050
+F 0 "J26" H 6250 6810 50  0000 L CNN
+F 1 "H3_IN" H 6250 6890 50  0000 L CNN
+F 2 "soloist88:TerminalBlock_1x02_P5.08" H 6350 7050 50  0001 C CNN
+F 3 "" H 6350 7050 50  0001 C CNN
+	1    6350 7050
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 J28
+U 1 1 573E3DEB
+P 8800 7050
+F 0 "J28" H 8650 6810 50  0000 L CNN
+F 1 "H3_KAN_L" H 8650 6890 50  0000 L CNN
+F 2 "soloist88:TerminalBlock_1x02_P5.08" H 8800 7050 50  0001 C CNN
+F 3 "" H 8800 7050 50  0001 C CNN
+	1    8800 7050
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 J30
+U 1 1 50FE8498
+P 8800 7650
+F 0 "J30" H 8650 7410 50  0000 L CNN
+F 1 "H3_KAN_R" H 8650 7490 50  0000 L CNN
+F 2 "soloist88:TerminalBlock_1x02_P5.08" H 8800 7650 50  0001 C CNN
+F 3 "" H 8800 7650 50  0001 C CNN
+	1    8800 7650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R13
+U 1 1 59F44568
+P 7200 7150
+F 0 "R13" H 7260 7130 50  0000 L CNN
+F 1 "100R 1W" H 7260 7210 50  0000 L CNN
+F 2 "soloist88:R_Axial_1W_P15.24_V" H 7200 7150 50  0001 C CNN
+F 3 "" H 7200 7150 50  0001 C CNN
+	1    7200 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R14
+U 1 1 5790D0CB
+P 7200 7550
+F 0 "R14" H 7260 7530 50  0000 L CNN
+F 1 "100R 1W" H 7260 7610 50  0000 L CNN
+F 2 "soloist88:R_Axial_1W_P15.24_V" H 7200 7550 50  0001 C CNN
+F 3 "" H 7200 7550 50  0001 C CNN
+	1    7200 7550
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 J34
+U 1 1 57934081
+P 7800 7400
+F 0 "J34" H 7650 7160 50  0000 L CNN
+F 1 "Z_HV" H 7650 7240 50  0000 L CNN
+F 2 "soloist88:TerminalBlock_1x02_P5.08" H 7800 7400 50  0001 C CNN
+F 3 "" H 7800 7400 50  0001 C CNN
+	1    7800 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_3 J32
+U 1 1 5EF0E5B4
+P 2500 9200
+F 0 "J32" H 2350 8910 50  0000 L CNN
+F 1 "RELAY_A" H 2350 8990 50  0000 L CNN
+F 2 "soloist88:PinHeader_1x03_P2.54" H 2500 9200 50  0001 C CNN
+F 3 "" H 2500 9200 50  0001 C CNN
+	1    2500 9200
+	1    0    0    -1  
+$EndComp
+$Comp
+L D_V D9
+U 1 1 5AC910F6
+P 3500 9200
+F 0 "D9" H 3570 9180 50  0000 L CNN
+F 1 "1N4148" H 3570 9260 50  0000 L CNN
+F 2 "soloist88:D_DO-35_P7.62_V" H 3500 9200 50  0001 C CNN
+F 3 "" H 3500 9200 50  0001 C CNN
+	1    3500 9200
+	1    0    0    -1  
+$EndComp
+$Comp
+L D_V D10
+U 1 1 5856CB10
+P 4000 9200
+F 0 "D10" H 4070 9180 50  0000 L CNN
+F 1 "1N4148" H 4070 9260 50  0000 L CNN
+F 2 "soloist88:D_DO-35_P7.62_V" H 4000 9200 50  0001 C CNN
+F 3 "" H 4000 9200 50  0001 C CNN
+	1    4000 9200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 2000 1400 2000
+Wire Wire Line
+	1400 2000 3200 2000
+Wire Wire Line
+	3200 2000 3200 2300
+Wire Wire Line
+	650 2300 800 2300
+Wire Wire Line
+	1100 2300 1400 2300
+Wire Wire Line
+	1400 2000 1400 2300
+Wire Wire Line
+	1150 2100 1250 2100
+Wire Wire Line
+	650 2400 650 2500
+Wire Wire Line
+	3000 2300 3200 2300
+Wire Wire Line
+	3000 2500 3500 2500
+Wire Wire Line
+	3500 2500 3950 2500
+Wire Wire Line
+	4250 2500 4800 2500
+Wire Wire Line
+	4800 2500 5150 2500
+Wire Wire Line
+	5050 2600 5150 2600
+Wire Wire Line
+	3500 2500 3500 2900
+Wire Wire Line
+	3500 2900 4650 2900
+Wire Wire Line
+	4650 2900 4650 3200
+Wire Wire Line
+	4500 3200 4650 3200
+Wire Wire Line
+	4800 2500 4800 3400
+Wire Wire Line
+	4500 3400 4800 3400
+Wire Wire Line
+	6650 2500 6850 2500
+Wire Wire Line
+	7150 2500 7350 2500
+Wire Wire Line
+	7350 2500 7350 2600
+Wire Wire Line
+	6650 2600 7350 2600
+Wire Wire Line
+	2000 5850 2000 6000
+Wire Wire Line
+	2000 6000 2000 6150
+Wire Wire Line
+	2600 5850 2600 6000
+Wire Wire Line
+	2600 6000 2600 6150
+Wire Wire Line
+	1150 6000 2000 6000
+Wire Wire Line
+	1150 6100 1300 6100
+Wire Wire Line
+	1300 6100 1300 7000
+Wire Wire Line
+	1300 7000 2850 7000
+Wire Wire Line
+	2850 6000 2850 7000
+Wire Wire Line
+	2600 6000 2850 6000
+Wire Wire Line
+	2000 5400 2000 5550
+Wire Wire Line
+	2000 5400 2300 5400
+Wire Wire Line
+	2300 5400 2600 5400
+Wire Wire Line
+	2600 5400 2600 5550
+Wire Wire Line
+	2300 5300 2300 5400
+Wire Wire Line
+	2000 6450 2000 6600
+Wire Wire Line
+	2000 6600 2600 6600
+Wire Wire Line
+	2600 6450 2600 6600
+Wire Wire Line
+	2600 6600 3500 6600
+Wire Wire Line
+	3500 6600 3850 6600
+Wire Wire Line
+	3500 6200 3500 6300
+Wire Wire Line
+	4150 6600 4500 6600
+Wire Wire Line
+	4500 6600 4750 6600
+Wire Wire Line
+	4750 6600 5000 6600
+Wire Wire Line
+	4500 6200 4500 6300
+Wire Wire Line
+	5000 6600 5200 6600
+Wire Wire Line
+	5000 6700 5200 6700
+Wire Wire Line
+	5000 6800 5200 6800
+Wire Wire Line
+	5000 6600 5000 6700
+Wire Wire Line
+	5000 6700 5000 6800
+Wire Wire Line
+	4750 6500 4750 6600
+Wire Wire Line
+	6650 5800 7200 5800
+Wire Wire Line
+	7200 5800 7200 5900
+Wire Wire Line
+	6650 5900 6750 5900
+Wire Wire Line
+	6750 5900 6750 6600
+Wire Wire Line
+	6750 6600 7400 6600
+Wire Wire Line
+	7400 5700 7400 6600
+Wire Wire Line
+	7400 5700 7600 5700
+Wire Wire Line
+	7600 5700 7600 5900
+Wire Wire Line
+	7200 6200 7200 6300
+Wire Wire Line
+	7600 6200 7600 6300
+Wire Wire Line
+	6650 7000 7200 7000
+Wire Wire Line
+	7200 7000 8300 7000
+Wire Wire Line
+	8300 7000 8500 7000
+Wire Wire Line
+	6650 7100 6750 7100
+Wire Wire Line
+	6750 7100 6750 7700
+Wire Wire Line
+	6750 7700 7200 7700
+Wire Wire Line
+	7200 7700 8200 7700
+Wire Wire Line
+	8200 7700 8500 7700
+Wire Wire Line
+	8200 7100 8200 7700
+Wire Wire Line
+	8200 7100 8500 7100
+Wire Wire Line
+	8300 7000 8300 7600
+Wire Wire Line
+	8300 7600 8500 7600
+Wire Wire Line
+	7200 7300 7200 7350
+Wire Wire Line
+	7200 7350 7200 7400
+Wire Wire Line
+	7200 7350 7500 7350
+Wire Wire Line
+	7500 7450 7500 7550
+Wire Wire Line
+	2100 2400 2200 2400
+Wire Wire Line
+	2100 2500 2200 2500
+Wire Wire Line
+	3000 2700 3100 2700
+Wire Wire Line
+	3000 2900 3100 2900
+Wire Wire Line
+	3600 3300 3700 3300
+Wire Wire Line
+	3600 3400 3700 3400
+Wire Wire Line
+	4500 3600 4600 3600
+Wire Wire Line
+	4500 3800 4600 3800
+Wire Wire Line
+	2100 9100 2200 9100
+Wire Wire Line
+	2100 9200 2200 9200
+Wire Wire Line
+	2100 9300 2200 9300
+Wire Wire Line
+	3500 9350 3500 9450
+Wire Wire Line
+	3500 8950 3500 9050
+Wire Wire Line
+	4000 9350 4000 9450
+Wire Wire Line
+	4000 8950 4000 9050
+Connection ~ 1400 2000
+Connection ~ 3500 2500
+Connection ~ 4800 2500
+Connection ~ 2000 6000
+Connection ~ 2600 6000
+Connection ~ 2300 5400
+Connection ~ 2600 6600
+Connection ~ 3500 6600
+Connection ~ 4500 6600
+Connection ~ 4750 6600
+Connection ~ 5000 6600
+Connection ~ 5000 6700
+Connection ~ 7200 7000
+Connection ~ 8300 7000
+Connection ~ 7200 7700
+Connection ~ 8200 7700
+Connection ~ 7200 7350
+Text Label 1250 2100 0    50   ~ 0
+N_SW
+Text Label 650 2500 3    50   ~ 0
+N_SW
+Text Label 5050 2600 2    50   ~ 0
+N_SW
+Text Label 3000 2300 0    50   ~ 0
+L_SW
+Text Label 3000 2500 0    50   ~ 0
+L_K1
+Text Label 4500 3200 0    50   ~ 0
+L_K1
+Text Label 4500 3400 0    50   ~ 0
+L_TR
+Text Label 2300 5300 1    50   ~ 0
+GND
+Text Label 3500 6200 1    50   ~ 0
+GND
+Text Label 4500 6200 1    50   ~ 0
+GND
+Text Label 4750 6500 1    50   ~ 0
+VBIAS
+Text Label 7200 6300 3    50   ~ 0
+GND
+Text Label 7600 6300 3    50   ~ 0
+GND
+Text Label 7500 7550 3    50   ~ 0
+GND
+Text Label 2100 2400 2    50   ~ 0
++12V
+Text Label 2100 2500 2    50   ~ 0
+RLY1
+Text Label 3100 2700 0    50   ~ 0
+L_SW
+Text Label 3100 2900 0    50   ~ 0
+L_K1
+Text Label 3600 3300 2    50   ~ 0
++12V
+Text Label 3600 3400 2    50   ~ 0
+RLY2
+Text Label 4600 3600 0    50   ~ 0
+L_K1
+Text Label 4600 3800 0    50   ~ 0
+L_TR
+Text Label 2100 9100 2    50   ~ 0
++12V
+Text Label 2100 9200 2    50   ~ 0
+RLY1
+Text Label 2100 9300 2    50   ~ 0
+RLY2
+Text Label 3500 9450 3    50   ~ 0
+RLY1
+Text Label 3500 8950 1    50   ~ 0
++12V
+Text Label 4000 9450 3    50   ~ 0
+RLY2
+Text Label 4000 8950 1    50   ~ 0
++12V
+Text Notes 900 1600 0    60   ~ 16
+230 V AC: wylacznik czuwania, miekki start TR1 (K1, K2, R_SS)
+Text Notes 900 1720 0    60   ~ 16
+F1 T2,5A zwloczny - w gniezdzie IEC (poza plytka): siec -> F1 -> SW1 -> J1
+Text Notes 5300 2850 0    60   ~ 16
+J5: pierwotne TR1
+Text Notes 100 2750 0    60   ~ 16
+J3: PS1 IRM-15-12
+Text Notes 6400 2200 0    60   ~ 16
+Bezpiecznik anodowy F3 w uzwojeniu S1 360 V:
+Text Notes 6400 2320 0    60   ~ 16
+TR1 S1 -> J38.1 -> F3 -> J38.2 -> plytka HV J7
+Text Notes 900 5100 0    60   ~ 16
+Bias -78 V
+Text Notes 4600 7000 0    60   ~ 16
+J21: 1 kanal L, 2 kanal R,
+Text Notes 4600 7120 0    60   ~ 16
+3 sterowanie J5
+Text Notes 6400 5500 0    60   ~ 16
+Zarzenie: S2 6,3 V/7 A (KT88), S3 6,3 V/3 A (+42 V)
+Text Notes 8950 6850 0    60   ~ 16
+kanal L
+Text Notes 8950 7450 0    60   ~ 16
+kanal R
+Text Notes 7650 7950 0    60   ~ 16
+J34: +42 V (J36) i GND (J37) z plytki HV
+Text Notes 900 8700 0    60   ~ 16
+Cewki K1, K2 (z plytki sterowania)
+Text Notes 900 8100 0    60   ~ 16
+Wszystkie zlacza poza J32 - srubowe; J38 raster 7,62 mm, min. 400 V
+NoConn ~ 3000 2400
+NoConn ~ 3000 2800
+NoConn ~ 4500 3300
+NoConn ~ 4500 3700
+$EndSCHEMATC

@@ -1,0 +1,1036 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 1
+Title "Soloist 88 - plytka kanalu (x2)"
+Date ""
+Rev "0.4"
+Comp ""
+Comment1 "Soloist 88 Stereo"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L soloist88:PAD_L J101
+U 1 1 5EDCDE2B
+P 1000 2950
+F 0 "J101" H 750 2930 50  0000 L CNN
+F 1 "IN" H 750 3010 50  0000 L CNN
+F 2 "soloist88:WirePad_3.5" H 1000 2950 50  0001 C CNN
+F 3 "~" H 1000 2950 50  0001 C CNN
+	1    1000 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:CH C101
+U 1 1 53D491A1
+P 1450 2950
+F 0 "C101" H 1390 2850 50  0000 L CNN
+F 1 "47n/250V" H 1390 3060 50  0000 L CNN
+F 2 "soloist88:C_Box_P10_13x5" H 1450 2950 50  0001 C CNN
+F 3 "~" H 1450 2950 50  0001 C CNN
+	1    1450 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:R R101
+U 1 1 5B71A15B
+P 1750 3250
+F 0 "R101" H 1810 3230 50  0000 L CNN
+F 1 "220k" H 1810 3310 50  0000 L CNN
+F 2 "soloist88:R_Axial_0.5W_P12.7" H 1750 3250 50  0001 C CNN
+F 3 "~" H 1750 3250 50  0001 C CNN
+	1    1750 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:RH R102
+U 1 1 5278F0E1
+P 2150 2950
+F 0 "R102" H 2090 2890 50  0000 L CNN
+F 1 "1k" H 2090 3020 50  0000 L CNN
+F 2 "soloist88:R_Axial_0.5W_P12.7" H 2150 2950 50  0001 C CNN
+F 3 "~" H 2150 2950 50  0001 C CNN
+	1    2150 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:PAD_L J102
+U 1 1 57D58F91
+P 1000 3600
+F 0 "J102" H 750 3580 50  0000 L CNN
+F 1 "GND_IN" H 750 3660 50  0000 L CNN
+F 2 "soloist88:WirePad_3.5" H 1000 3600 50  0001 C CNN
+F 3 "~" H 1000 3600 50  0001 C CNN
+	1    1000 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:EF86W V101
+U 1 1 5413360C
+P 2800 3000
+F 0 "V101" H 3080 2590 50  0000 L CNN
+F 1 "EF86" H 3080 2670 50  0000 L CNN
+F 2 "soloist88:Noval_B9A_PCB" H 2800 3000 50  0001 C CNN
+F 3 "~" H 2800 3000 50  0001 C CNN
+	1    2800 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:R R103
+U 1 1 557FC077
+P 2350 3950
+F 0 "R103" H 2410 3930 50  0000 L CNN
+F 1 "330R" H 2410 4010 50  0000 L CNN
+F 2 "soloist88:R_Axial_0.5W_P12.7" H 2350 3950 50  0001 C CNN
+F 3 "~" H 2350 3950 50  0001 C CNN
+	1    2350 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:RH R104
+U 1 1 5B1B55D4
+P 2700 4000
+F 0 "R104" H 2640 3940 50  0000 L CNN
+F 1 "27k*" H 2640 4070 50  0000 L CNN
+F 2 "soloist88:R_Axial_0.5W_P12.7_V" H 2700 4000 50  0001 C CNN
+F 3 "~" H 2700 4000 50  0001 C CNN
+	1    2700 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:CH C103
+U 1 1 5DDAF08D
+P 2700 4250
+F 0 "C103" H 2640 4150 50  0000 L CNN
+F 1 "120p*" H 2640 4360 50  0000 L CNN
+F 2 "soloist88:C_Box_P5_7x4" H 2700 4250 50  0001 C CNN
+F 3 "~" H 2700 4250 50  0001 C CNN
+	1    2700 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:PAD J103
+U 1 1 50D2BF07
+P 3150 4000
+F 0 "J103" H 3230 3980 50  0000 L CNN
+F 1 "FB" H 3230 4060 50  0000 L CNN
+F 2 "soloist88:WirePad_3.5" H 3150 4000 50  0001 C CNN
+F 3 "~" H 3150 4000 50  0001 C CNN
+	1    3150 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:TP_D TP109
+U 1 1 5556A0E8
+P 3200 3850
+F 0 "TP109" H 3280 3830 50  0000 L CNN
+F 1 "K_EF" H 3280 3910 50  0000 L CNN
+F 2 "soloist88:TestPoint_2" H 3200 3850 50  0001 C CNN
+F 3 "~" H 3200 3850 50  0001 C CNN
+	1    3200 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:R R106
+U 1 1 551534F8
+P 3700 2550
+F 0 "R106" H 3760 2530 50  0000 L CNN
+F 1 "470k" H 3760 2610 50  0000 L CNN
+F 2 "soloist88:R_Axial_0.5W_P12.7_V" H 3700 2550 50  0001 C CNN
+F 3 "~" H 3700 2550 50  0001 C CNN
+	1    3700 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:C C102
+U 1 1 5ADDC01B
+P 3700 3250
+F 0 "C102" H 3800 3230 50  0000 L CNN
+F 1 "47n/400V" H 3800 3310 50  0000 L CNN
+F 2 "soloist88:C_Box_P15_18x6_V" H 3700 3250 50  0001 C CNN
+F 3 "~" H 3700 3250 50  0001 C CNN
+	1    3700 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:R R107
+U 1 1 5212046E
+P 3950 3150
+F 0 "R107" H 4010 3130 50  0000 L CNN
+F 1 "1M5" H 4010 3210 50  0000 L CNN
+F 2 "soloist88:R_Axial_0.5W_P12.7_V" H 3950 3150 50  0001 C CNN
+F 3 "~" H 3950 3150 50  0001 C CNN
+	1    3950 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:R R105
+U 1 1 5C1C6542
+P 2600 2050
+F 0 "R105" H 2660 2030 50  0000 L CNN
+F 1 "100k 1W" H 2660 2110 50  0000 L CNN
+F 2 "soloist88:R_Axial_1W_P15.24_V" H 2600 2050 50  0001 C CNN
+F 3 "~" H 2600 2050 50  0001 C CNN
+	1    2600 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:R R128
+U 1 1 509B7B7D
+P 3150 1750
+F 0 "R128" H 3210 1730 50  0000 L CNN
+F 1 "4k7 (opcja)" H 3210 1810 50  0000 L CNN
+F 2 "soloist88:R_Axial_0.5W_P12.7_V" H 3150 1750 50  0001 C CNN
+F 3 "~" H 3150 1750 50  0001 C CNN
+	1    3150 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:C C107
+U 1 1 5AB73494
+P 3150 2100
+F 0 "C107" H 3250 2080 50  0000 L CNN
+F 1 "33p (opcja)" H 3250 2160 50  0000 L CNN
+F 2 "soloist88:C_Box_P5_7x4" H 3150 2100 50  0001 C CNN
+F 3 "~" H 3150 2100 50  0001 C CNN
+	1    3150 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:TP TP108
+U 1 1 5251907E
+P 3500 1450
+F 0 "TP108" H 3580 1430 50  0000 L CNN
+F 1 "A_EF" H 3580 1510 50  0000 L CNN
+F 2 "soloist88:TestPoint_2" H 3500 1450 50  0001 C CNN
+F 3 "~" H 3500 1450 50  0001 C CNN
+	1    3500 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:E88CCW V102
+U 1 1 5D1A67B6
+P 5000 3000
+F 0 "V102" H 5380 2590 50  0000 L CNN
+F 1 "E88CC" H 5380 2670 50  0000 L CNN
+F 2 "soloist88:Noval_B9A_PCB" H 5000 3000 50  0001 C CNN
+F 3 "~" H 5000 3000 50  0001 C CNN
+	1    5000 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:RH R108
+U 1 1 52AD19FF
+P 4250 3000
+F 0 "R108" H 4190 2940 50  0000 L CNN
+F 1 "1k" H 4190 3070 50  0000 L CNN
+F 2 "soloist88:R_Axial_0.5W_P12.7" H 4250 3000 50  0001 C CNN
+F 3 "~" H 4250 3000 50  0001 C CNN
+	1    4250 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:R R111
+U 1 1 526A901A
+P 4850 2150
+F 0 "R111" H 4910 2130 50  0000 L CNN
+F 1 "27k 5W" H 4910 2210 50  0000 L CNN
+F 2 "soloist88:R_Axial_5-7W_P35.56" H 4850 2150 50  0001 C CNN
+F 3 "~" H 4850 2150 50  0001 C CNN
+	1    4850 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:R R112
+U 1 1 5B63C1A0
+P 5150 2150
+F 0 "R112" H 5210 2130 50  0000 L CNN
+F 1 "27k 5W" H 5210 2210 50  0000 L CNN
+F 2 "soloist88:R_Axial_5-7W_P35.56" H 5150 2150 50  0001 C CNN
+F 3 "~" H 5150 2150 50  0001 C CNN
+	1    5150 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:R R129
+U 1 1 579C4BEB
+P 5550 1750
+F 0 "R129" H 5610 1730 50  0000 L CNN
+F 1 "1M2 (opcja)" H 5610 1810 50  0000 L CNN
+F 2 "soloist88:R_Axial_0.5W_P12.7" H 5550 1750 50  0001 C CNN
+F 3 "~" H 5550 1750 50  0001 C CNN
+	1    5550 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:C C108
+U 1 1 5A082905
+P 5550 2100
+F 0 "C108" H 5650 2080 50  0000 L CNN
+F 1 "2p7 (opcja)" H 5650 2160 50  0000 L CNN
+F 2 "soloist88:C_Box_P5_7x4" H 5550 2100 50  0001 C CNN
+F 3 "~" H 5550 2100 50  0001 C CNN
+	1    5550 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:TP TP105
+U 1 1 5CE0ECC3
+P 6250 2200
+F 0 "TP105" H 6330 2180 50  0000 L CNN
+F 1 "ANODE_B" H 6330 2260 50  0000 L CNN
+F 2 "soloist88:TestPoint_2" H 6250 2200 50  0001 C CNN
+F 3 "~" H 6250 2200 50  0001 C CNN
+	1    6250 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:TP_D TP104
+U 1 1 5BE7DC55
+P 6200 2650
+F 0 "TP104" H 6280 2630 50  0000 L CNN
+F 1 "ANODE_A" H 6280 2710 50  0000 L CNN
+F 2 "soloist88:TestPoint_2" H 6200 2650 50  0001 C CNN
+F 3 "~" H 6200 2650 50  0001 C CNN
+	1    6200 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:RH R110
+U 1 1 556DA08C
+P 5700 3000
+F 0 "R110" H 5640 2940 50  0000 L CNN
+F 1 "1k" H 5640 3070 50  0000 L CNN
+F 2 "soloist88:R_Axial_0.5W_P12.7" H 5700 3000 50  0001 C CNN
+F 3 "~" H 5700 3000 50  0001 C CNN
+	1    5700 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:R R109
+U 1 1 55AA2969
+P 6050 1750
+F 0 "R109" H 6110 1730 50  0000 L CNN
+F 1 "1M" H 6110 1810 50  0000 L CNN
+F 2 "soloist88:R_Axial_0.5W_P12.7_V" H 6050 1750 50  0001 C CNN
+F 3 "~" H 6050 1750 50  0001 C CNN
+	1    6050 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:C C104
+U 1 1 53BE652E
+P 6250 3300
+F 0 "C104" H 6350 3280 50  0000 L CNN
+F 1 "470n/400V" H 6350 3360 50  0000 L CNN
+F 2 "soloist88:C_Box_P22.5_26.5x8.5_V" H 6250 3300 50  0001 C CNN
+F 3 "~" H 6250 3300 50  0001 C CNN
+	1    6250 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:TP TP103
+U 1 1 558349F6
+P 5250 3400
+F 0 "TP103" H 5330 3380 50  0000 L CNN
+F 1 "TAIL" H 5330 3460 50  0000 L CNN
+F 2 "soloist88:TestPoint_2" H 5250 3400 50  0001 C CNN
+F 3 "~" H 5250 3400 50  0001 C CNN
+	1    5250 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:DN2540W Q101
+U 1 1 59C40EB5
+P 5000 4000
+F 0 "Q101" H 5180 3980 50  0000 L CNN
+F 1 "DN2540N5" H 5180 4060 50  0000 L CNN
+F 2 "soloist88:TO-220_Vertical_SmallHeatsink" H 5000 4000 50  0001 C CNN
+F 3 "~" H 5000 4000 50  0001 C CNN
+	1    5000 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:R R113
+U 1 1 5C64F136
+P 4450 4300
+F 0 "R113" H 4510 4280 50  0000 L CNN
+F 1 "1k" H 4510 4360 50  0000 L CNN
+F 2 "soloist88:R_Axial_0.5W_P12.7" H 4450 4300 50  0001 C CNN
+F 3 "~" H 4450 4300 50  0001 C CNN
+	1    4450 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:ZENER_H D105
+U 1 1 596E6D01
+P 4850 4450
+F 0 "D105" H 4790 4360 50  0000 L CNN
+F 1 "1N4742A 12V" H 4790 4560 50  0000 L CNN
+F 2 "soloist88:D_DO-41_P10.16" H 4850 4450 50  0001 C CNN
+F 3 "~" H 4850 4450 50  0001 C CNN
+	1    4850 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:POT P101
+U 1 1 517869D0
+P 5000 4750
+F 0 "P101" H 4700 4730 50  0000 L CNN
+F 1 "200R" H 4700 4810 50  0000 L CNN
+F 2 "soloist88:Trim_3296W" H 5000 4750 50  0001 C CNN
+F 3 "~" H 5000 4750 50  0001 C CNN
+	1    5000 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:R R114
+U 1 1 52006495
+P 5000 5050
+F 0 "R114" H 5060 5030 50  0000 L CNN
+F 1 "100R" H 5060 5110 50  0000 L CNN
+F 2 "soloist88:R_Axial_0.5W_P12.7" H 5000 5050 50  0001 C CNN
+F 3 "~" H 5000 5050 50  0001 C CNN
+	1    5000 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:CHR C105
+U 1 1 54B955B8
+P 6700 2350
+F 0 "C105" H 6640 2250 50  0000 L CNN
+F 1 "0,47u/630V" H 6640 2460 50  0000 L CNN
+F 2 "soloist88:C_Box_P27.5_31.5x11" H 6700 2350 50  0001 C CNN
+F 3 "~" H 6700 2350 50  0001 C CNN
+	1    6700 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:PAD J107
+U 1 1 57BF7B1E
+P 7450 2350
+F 0 "J107" H 7530 2330 50  0000 L CNN
+F 1 "G1_V103" H 7530 2410 50  0000 L CNN
+F 2 "soloist88:WirePad_3.5" H 7450 2350 50  0001 C CNN
+F 3 "~" H 7450 2350 50  0001 C CNN
+	1    7450 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:R R115
+U 1 1 55075403
+P 7100 2100
+F 0 "R115" H 7160 2080 50  0000 L CNN
+F 1 "100k" H 7160 2160 50  0000 L CNN
+F 2 "soloist88:R_Axial_0.5W_P12.7" H 7100 2100 50  0001 C CNN
+F 3 "~" H 7100 2100 50  0001 C CNN
+	1    7100 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:R R119
+U 1 1 5CB11828
+P 7100 1700
+F 0 "R119" H 7160 1680 50  0000 L CNN
+F 1 "27k" H 7160 1760 50  0000 L CNN
+F 2 "soloist88:R_Axial_0.5W_P12.7" H 7100 1700 50  0001 C CNN
+F 3 "~" H 7100 1700 50  0001 C CNN
+	1    7100 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:POT P102
+U 1 1 5871386A
+P 7800 2000
+F 0 "P102" H 7500 1980 50  0000 L CNN
+F 1 "50k" H 7500 2060 50  0000 L CNN
+F 2 "soloist88:Trim_3296W" H 7800 2000 50  0001 C CNN
+F 3 "~" H 7800 2000 50  0001 C CNN
+	1    7800 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:R R121
+U 1 1 5947C3D9
+P 7800 2300
+F 0 "R121" H 7860 2280 50  0000 L CNN
+F 1 "27k" H 7860 2360 50  0000 L CNN
+F 2 "soloist88:R_Axial_0.5W_P12.7_V" H 7800 2300 50  0001 C CNN
+F 3 "~" H 7800 2300 50  0001 C CNN
+	1    7800 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:TP TP106
+U 1 1 55E9BD79
+P 7450 1700
+F 0 "TP106" H 7530 1680 50  0000 L CNN
+F 1 "BIAS_T" H 7530 1760 50  0000 L CNN
+F 2 "soloist88:TestPoint_2" H 7450 1700 50  0001 C CNN
+F 3 "~" H 7450 1700 50  0001 C CNN
+	1    7450 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:CHR C106
+U 1 1 5DB00402
+P 6700 4100
+F 0 "C106" H 6640 4000 50  0000 L CNN
+F 1 "0,47u/630V" H 6640 4210 50  0000 L CNN
+F 2 "soloist88:C_Box_P27.5_31.5x11" H 6700 4100 50  0001 C CNN
+F 3 "~" H 6700 4100 50  0001 C CNN
+	1    6700 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:PAD J108
+U 1 1 5700668F
+P 7450 4100
+F 0 "J108" H 7530 4080 50  0000 L CNN
+F 1 "G1_V104" H 7530 4160 50  0000 L CNN
+F 2 "soloist88:WirePad_3.5" H 7450 4100 50  0001 C CNN
+F 3 "~" H 7450 4100 50  0001 C CNN
+	1    7450 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:R R116
+U 1 1 5C0E05B9
+P 7100 3850
+F 0 "R116" H 7160 3830 50  0000 L CNN
+F 1 "100k" H 7160 3910 50  0000 L CNN
+F 2 "soloist88:R_Axial_0.5W_P12.7_V" H 7100 3850 50  0001 C CNN
+F 3 "~" H 7100 3850 50  0001 C CNN
+	1    7100 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:R R120
+U 1 1 5E40F34F
+P 7100 3450
+F 0 "R120" H 7160 3430 50  0000 L CNN
+F 1 "27k" H 7160 3510 50  0000 L CNN
+F 2 "soloist88:R_Axial_0.5W_P12.7_V" H 7100 3450 50  0001 C CNN
+F 3 "~" H 7100 3450 50  0001 C CNN
+	1    7100 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:POT P103
+U 1 1 5F7608FC
+P 7800 3750
+F 0 "P103" H 7500 3730 50  0000 L CNN
+F 1 "50k" H 7500 3810 50  0000 L CNN
+F 2 "soloist88:Trim_3296W" H 7800 3750 50  0001 C CNN
+F 3 "~" H 7800 3750 50  0001 C CNN
+	1    7800 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:R R122
+U 1 1 504E9263
+P 7800 4050
+F 0 "R122" H 7860 4030 50  0000 L CNN
+F 1 "27k" H 7860 4110 50  0000 L CNN
+F 2 "soloist88:R_Axial_0.5W_P12.7_V" H 7800 4050 50  0001 C CNN
+F 3 "~" H 7800 4050 50  0001 C CNN
+	1    7800 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:TP TP107
+U 1 1 52EE8DEF
+P 7450 3450
+F 0 "TP107" H 7530 3430 50  0000 L CNN
+F 1 "BIAS_B" H 7530 3510 50  0000 L CNN
+F 2 "soloist88:TestPoint_2" H 7450 3450 50  0001 C CNN
+F 3 "~" H 7450 3450 50  0001 C CNN
+	1    7450 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:PAD J106
+U 1 1 50B84B88
+P 7450 1450
+F 0 "J106" H 7530 1430 50  0000 L CNN
+F 1 "-78V" H 7530 1510 50  0000 L CNN
+F 2 "soloist88:WirePad_3.5" H 7450 1450 50  0001 C CNN
+F 3 "~" H 7450 1450 50  0001 C CNN
+	1    7450 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:PAD_L J104
+U 1 1 5EB62AA4
+P 1000 5300
+F 0 "J104" H 750 5280 50  0000 L CNN
+F 1 "B+3" H 750 5360 50  0000 L CNN
+F 2 "soloist88:WirePad_4.5" H 1000 5300 50  0001 C CNN
+F 3 "~" H 1000 5300 50  0001 C CNN
+	1    1000 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:RH R130
+U 1 1 575BC20E
+P 1450 5300
+F 0 "R130" H 1390 5240 50  0000 L CNN
+F 1 "330R 2W" H 1390 5370 50  0000 L CNN
+F 2 "soloist88:R_Axial_2W_P20.32_V" H 1450 5300 50  0001 C CNN
+F 3 "~" H 1450 5300 50  0001 C CNN
+	1    1450 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:CP C130
+U 1 1 5FFEF2F4
+P 1800 5550
+F 0 "C130" H 1900 5530 50  0000 L CNN
+F 1 "220u/550V" H 1900 5610 50  0000 L CNN
+F 2 "soloist88:CP_SnapIn_D35_P10" H 1800 5550 50  0001 C CNN
+F 3 "~" H 1800 5550 50  0001 C CNN
+	1    1800 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:RH R131
+U 1 1 505CF298
+P 2250 5300
+F 0 "R131" H 2190 5240 50  0000 L CNN
+F 1 "68k 1W" H 2190 5370 50  0000 L CNN
+F 2 "soloist88:R_Axial_1W_P15.24" H 2250 5300 50  0001 C CNN
+F 3 "~" H 2250 5300 50  0001 C CNN
+	1    2250 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:CP C131
+U 1 1 58F9C262
+P 2700 5550
+F 0 "C131" H 2800 5530 50  0000 L CNN
+F 1 "47u/500V" H 2800 5610 50  0000 L CNN
+F 2 "soloist88:CP_Radial_D18_P7.5" H 2700 5550 50  0001 C CNN
+F 3 "~" H 2700 5550 50  0001 C CNN
+	1    2700 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:TP TP102
+U 1 1 52847960
+P 2000 5150
+F 0 "TP102" H 2080 5130 50  0000 L CNN
+F 1 "B+2" H 2080 5210 50  0000 L CNN
+F 2 "soloist88:TestPoint_2" H 2000 5150 50  0001 C CNN
+F 3 "~" H 2000 5150 50  0001 C CNN
+	1    2000 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:TP TP101
+U 1 1 5B8D28DA
+P 2950 5150
+F 0 "TP101" H 3030 5130 50  0000 L CNN
+F 1 "B+1" H 3030 5210 50  0000 L CNN
+F 2 "soloist88:TestPoint_2" H 2950 5150 50  0001 C CNN
+F 3 "~" H 2950 5150 50  0001 C CNN
+	1    2950 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:PAD_L J105
+U 1 1 59B11A32
+P 1000 5900
+F 0 "J105" H 750 5880 50  0000 L CNN
+F 1 "GND" H 750 5960 50  0000 L CNN
+F 2 "soloist88:WirePad_4.5" H 1000 5900 50  0001 C CNN
+F 3 "~" H 1000 5900 50  0001 C CNN
+	1    1000 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:PAD_L J109
+U 1 1 50075619
+P 1000 6300
+F 0 "J109" H 750 6280 50  0000 L CNN
+F 1 "HTR_A" H 750 6360 50  0000 L CNN
+F 2 "soloist88:WirePad_3.5" H 1000 6300 50  0001 C CNN
+F 3 "~" H 1000 6300 50  0001 C CNN
+	1    1000 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L soloist88:PAD_L J110
+U 1 1 50C0DFFC
+P 1000 6550
+F 0 "J110" H 750 6530 50  0000 L CNN
+F 1 "HTR_B" H 750 6610 50  0000 L CNN
+F 2 "soloist88:WirePad_3.5" H 1000 6550 50  0001 C CNN
+F 3 "~" H 1000 6550 50  0001 C CNN
+	1    1000 6550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 2950 1300 2950
+Wire Wire Line
+	1600 2950 1750 2950
+Wire Wire Line
+	1750 2950 2000 2950
+Wire Wire Line
+	1750 2950 1750 3100
+Wire Wire Line
+	1750 3400 1750 3500
+Wire Wire Line
+	1150 3600 1250 3600
+Wire Wire Line
+	2300 2950 2400 2950
+Wire Wire Line
+	2600 3450 2600 3500
+Wire Wire Line
+	2600 3500 2700 3500
+Wire Wire Line
+	2700 3500 2800 3500
+Wire Wire Line
+	2800 3450 2800 3500
+Wire Wire Line
+	2700 3450 2700 3500
+Wire Wire Line
+	2700 3500 2700 3700
+Wire Wire Line
+	2350 3050 2400 3050
+Wire Wire Line
+	2350 3050 2350 3700
+Wire Wire Line
+	2350 3700 2550 3700
+Wire Wire Line
+	2550 3700 2700 3700
+Wire Wire Line
+	2700 3700 3200 3700
+Wire Wire Line
+	3200 3700 3700 3700
+Wire Wire Line
+	2350 3700 2350 3800
+Wire Wire Line
+	2350 4100 2350 4200
+Wire Wire Line
+	2550 3700 2550 4000
+Wire Wire Line
+	2550 4000 2550 4250
+Wire Wire Line
+	2850 4000 2850 4250
+Wire Wire Line
+	2850 4000 3000 4000
+Wire Wire Line
+	3200 2850 3700 2850
+Wire Wire Line
+	3700 2700 3700 2850
+Wire Wire Line
+	3700 2850 3700 3100
+Wire Wire Line
+	3700 3400 3700 3700
+Wire Wire Line
+	3700 2850 3950 2850
+Wire Wire Line
+	3950 2850 3950 3000
+Wire Wire Line
+	3950 3300 3950 3400
+Wire Wire Line
+	3700 2300 3700 2400
+Wire Wire Line
+	3200 3150 3300 3150
+Wire Wire Line
+	3200 3250 3300 3250
+Wire Wire Line
+	2600 1800 2600 1900
+Wire Wire Line
+	2800 2200 2800 2550
+Wire Wire Line
+	2800 1600 2800 2200
+Wire Wire Line
+	2800 1600 3150 1600
+Wire Wire Line
+	3150 1600 3500 1600
+Wire Wire Line
+	3500 1600 4100 1600
+Wire Wire Line
+	4100 1600 5550 1600
+Wire Wire Line
+	5550 1600 6050 1600
+Wire Wire Line
+	2600 2200 2800 2200
+Wire Wire Line
+	3150 1900 3150 1950
+Wire Wire Line
+	3150 2250 3150 2350
+Wire Wire Line
+	4100 1600 4100 3000
+Wire Wire Line
+	4400 3000 4500 3000
+Wire Wire Line
+	4400 3200 4500 3200
+Wire Wire Line
+	5500 3150 5600 3150
+Wire Wire Line
+	5500 3250 5600 3250
+Wire Wire Line
+	4850 1900 4850 2000
+Wire Wire Line
+	5150 1900 5150 2000
+Wire Wire Line
+	4850 2300 4850 2500
+Wire Wire Line
+	4850 2500 4850 2550
+Wire Wire Line
+	5150 2300 5150 2350
+Wire Wire Line
+	5150 2350 5150 2550
+Wire Wire Line
+	5550 1900 5550 1950
+Wire Wire Line
+	5550 2250 5550 2350
+Wire Wire Line
+	5150 2350 5550 2350
+Wire Wire Line
+	5550 2350 6250 2350
+Wire Wire Line
+	6250 2350 6550 2350
+Wire Wire Line
+	4850 2500 6200 2500
+Wire Wire Line
+	6200 2500 6400 2500
+Wire Wire Line
+	6400 2500 6400 4100
+Wire Wire Line
+	5500 3000 5550 3000
+Wire Wire Line
+	6050 1900 6050 3000
+Wire Wire Line
+	5850 3000 6050 3000
+Wire Wire Line
+	6050 3000 6250 3000
+Wire Wire Line
+	6250 3000 6250 3150
+Wire Wire Line
+	6250 3450 6250 3550
+Wire Wire Line
+	4850 3450 4850 3550
+Wire Wire Line
+	4850 3550 5000 3550
+Wire Wire Line
+	5000 3550 5150 3550
+Wire Wire Line
+	5150 3550 5250 3550
+Wire Wire Line
+	5150 3450 5150 3550
+Wire Wire Line
+	5000 3550 5000 3700
+Wire Wire Line
+	4450 4000 4700 4000
+Wire Wire Line
+	4450 4000 4450 4150
+Wire Wire Line
+	4450 4450 4450 4550
+Wire Wire Line
+	4700 4000 4700 4450
+Wire Wire Line
+	5000 4300 5000 4450
+Wire Wire Line
+	5000 4450 5000 4600
+Wire Wire Line
+	5150 4750 5150 4900
+Wire Wire Line
+	5000 4900 5150 4900
+Wire Wire Line
+	5000 5200 5000 5300
+Wire Wire Line
+	6850 2350 7100 2350
+Wire Wire Line
+	7100 2350 7300 2350
+Wire Wire Line
+	7100 2250 7100 2350
+Wire Wire Line
+	7100 1850 7100 1950
+Wire Wire Line
+	7100 1450 7100 1550
+Wire Wire Line
+	7100 1850 7450 1850
+Wire Wire Line
+	7450 1850 7800 1850
+Wire Wire Line
+	7950 2000 7950 2150
+Wire Wire Line
+	7800 2150 7950 2150
+Wire Wire Line
+	7800 2450 7800 2550
+Wire Wire Line
+	6400 4100 6550 4100
+Wire Wire Line
+	6850 4100 7100 4100
+Wire Wire Line
+	7100 4100 7300 4100
+Wire Wire Line
+	7100 4000 7100 4100
+Wire Wire Line
+	7100 3600 7100 3700
+Wire Wire Line
+	7100 3200 7100 3300
+Wire Wire Line
+	7100 3600 7450 3600
+Wire Wire Line
+	7450 3600 7800 3600
+Wire Wire Line
+	7950 3750 7950 3900
+Wire Wire Line
+	7800 3900 7950 3900
+Wire Wire Line
+	7800 4200 7800 4300
+Wire Wire Line
+	7100 1450 7300 1450
+Wire Wire Line
+	1150 5300 1300 5300
+Wire Wire Line
+	1600 5300 1800 5300
+Wire Wire Line
+	1800 5300 2000 5300
+Wire Wire Line
+	2000 5300 2100 5300
+Wire Wire Line
+	1800 5300 1800 5400
+Wire Wire Line
+	2400 5300 2700 5300
+Wire Wire Line
+	2700 5300 2950 5300
+Wire Wire Line
+	2700 5300 2700 5400
+Wire Wire Line
+	1800 5200 1800 5300
+Wire Wire Line
+	2700 5200 2700 5300
+Wire Wire Line
+	1800 5700 1800 5800
+Wire Wire Line
+	2700 5700 2700 5800
+Wire Wire Line
+	1150 5900 1250 5900
+Wire Wire Line
+	1150 6300 1250 6300
+Wire Wire Line
+	1150 6550 1250 6550
+Connection ~ 1750 2950
+Connection ~ 2700 3500
+Connection ~ 2700 3700
+Connection ~ 2350 3700
+Connection ~ 2550 3700
+Connection ~ 3200 3700
+Connection ~ 2550 4000
+Connection ~ 2850 4000
+Connection ~ 3700 2850
+Connection ~ 2800 2200
+Connection ~ 3150 1600
+Connection ~ 3500 1600
+Connection ~ 4100 1600
+Connection ~ 5550 1600
+Connection ~ 4850 2500
+Connection ~ 5150 2350
+Connection ~ 5550 2350
+Connection ~ 6250 2350
+Connection ~ 6200 2500
+Connection ~ 6050 3000
+Connection ~ 5000 3550
+Connection ~ 5150 3550
+Connection ~ 4700 4000
+Connection ~ 5000 4450
+Connection ~ 5000 4900
+Connection ~ 7100 2350
+Connection ~ 7100 1850
+Connection ~ 7450 1850
+Connection ~ 7800 2150
+Connection ~ 7100 4100
+Connection ~ 7100 3600
+Connection ~ 7450 3600
+Connection ~ 7800 3900
+Connection ~ 1800 5300
+Connection ~ 2000 5300
+Connection ~ 2700 5300
+Text Label 1750 3500 3    50   ~ 0
+GND
+Text Label 1250 3600 0    50   ~ 0
+GND
+Text Label 2350 4200 3    50   ~ 0
+GND
+Text Label 3950 3400 3    50   ~ 0
+GND
+Text Label 3700 2300 1    50   ~ 0
+B+1
+Text Label 3300 3150 0    50   ~ 0
+HTR_A
+Text Label 3300 3250 0    50   ~ 0
+HTR_B
+Text Label 2600 1800 1    50   ~ 0
+B+1
+Text Label 3150 2350 3    50   ~ 0
+GND
+Text Label 4400 3200 2    50   ~ 0
+GND
+Text Label 5600 3150 0    50   ~ 0
+HTR_A
+Text Label 5600 3250 0    50   ~ 0
+HTR_B
+Text Label 4850 1900 1    50   ~ 0
+B+2
+Text Label 5150 1900 1    50   ~ 0
+B+2
+Text Label 6250 3550 3    50   ~ 0
+GND
+Text Label 4450 4550 3    50   ~ 0
+GND
+Text Label 5000 5300 3    50   ~ 0
+GND
+Text Label 7100 1450 1    50   ~ 0
+VBIAS
+Text Label 7800 2550 3    50   ~ 0
+GND
+Text Label 7100 3200 1    50   ~ 0
+VBIAS
+Text Label 7800 4300 3    50   ~ 0
+GND
+Text Label 1800 5200 1    50   ~ 0
+B+2
+Text Label 2700 5200 1    50   ~ 0
+B+1
+Text Label 1800 5800 3    50   ~ 0
+GND
+Text Label 2700 5800 3    50   ~ 0
+GND
+Text Label 1250 5900 0    50   ~ 0
+GND
+Text Label 1250 6300 0    50   ~ 0
+HTR_A
+Text Label 1250 6550 0    50   ~ 0
+HTR_B
+Text Notes 900 2650 0    60   ~ 16
+WEJSCIE
+Text Notes 2250 1250 0    60   ~ 16
+EF86 - stopien wejsciowy
+Text Notes 4300 1250 0    60   ~ 16
+E88CC - odwracacz fazy (LTP)
+Text Notes 4300 5500 0    60   ~ 16
+Zrodlo pradowe ogona 14 mA
+Text Notes 6600 1250 0    60   ~ 16
+Sprzeganie i bias KT88
+Text Notes 900 4950 0    60   ~ 16
+Zasilanie kanalu
+Text Notes 900 6050 0    60   ~ 16
+Zarzenie / masa
+Text Notes 6600 4600 0    60   ~ 16
+J107 -> R117 -> siatka V103
+Text Notes 6600 4720 0    60   ~ 16
+J108 -> R118 -> siatka V104
+Text Notes 2400 4600 0    60   ~ 16
+J103 FB <- wyjscie 4 ohm
+Text Notes 900 7200 0    60   ~ 16
+Opcje (niemontowane): R128/C107 siec schodkowa, R129/C108 korekcja fazy
+$EndSCHEMATC

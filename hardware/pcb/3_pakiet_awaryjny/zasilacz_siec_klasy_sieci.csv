@@ -1,0 +1,10 @@
+﻿Klasa;Szerokosc [mm];Odstep [mm];Odstep do innych klas;Sieci;Uwagi
+SIEC_230;2,0;3,0;6,0 do CEWKI;L_SW L_K1 L_TR N_SW L_TR2;"ok. 1,8 A + udar; izolacja wzmocniona do 12 V"
+HT_AC;1,5;3,0;6,0 do CEWKI;HT_TR HT_F;uzwojenie S1 360 V przez F3
+BIAS_AC;0,5;1,0;;B_AC1 B_AC2 VB_RAW VBIAS;+-92 V, kilka mA
+ZARZENIE_3;2,0;0,5;;H3_A H3_B;S3 rozdzielane na 2 kanaly, ok. 1,2 A
+ZARZENIE_2;0,5;0,5;;H2_A H2_B;"tylko R11/R12; 3,0 mm jesli 6,4 A KT88 idzie przez plytke"
+ELEW;0,5;0,5;;HTR_ELEV;+42 V, prad znikomy
+CEWKI;0,5;0,3;6,0 do SIEC_230/HT_AC;+12V RLY1 RLY2;ok. 50 mA na cewke
+GND;1,0;0,3;;GND;
+Default;0,4;0,3;;(pozostale sieci);
