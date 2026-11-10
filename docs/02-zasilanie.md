@@ -16,6 +16,33 @@
 
 W obudowie toroid sieciowy i dławik leżą jeden na drugim, ze środkami zalanymi żywicą.
 
+### Zamówienie TR1 w konfiguratorze Toroidy.pl
+
+Toroidy.pl nawijają transformator dedykowany według własnych parametrów. Do konfiguratora:
+
+| Uzwojenie | Napięcie (pod obciążeniem) | Prąd | Uwagi |
+|---|---|---|---|
+| Pierwotne | 230 V | – | **ekran elektrostatyczny** z osobnym wyprowadzeniem do PE |
+| S1 anodowe | **360 V + odczep 345 V** | 0,65 A | mostek UF5408 → B+ ok. 465 V |
+| S2 żarzenie KT88 | 6,3 V | 8 A | zapas na KT120 |
+| S3 żarzenie sygnałowe | 6,3 V | 3 A | zapas na 6CG7 (1,6 A), patrz [warianty lamp](12-warianty-lamp.md) |
+| S4 bias | 65 V | 50 mA | szyna ok. −80 V |
+
+Moc 400 VA. Obciążenie znamionowe wychodzi ok. 310 VA (S1 234 VA, S2 50 VA, S3 19 VA, S4 3 VA).
+
+Przed zamówieniem:
+
+1. **Zmierz napięcie sieci w domu.** W Polsce często jest 235–245 V, a nie 230 V. Przy 240 V S1 da ok. 375 V i B+ wyjdzie ok. 485 V. Wtedy użyj odczepu 345 V.
+2. **Zapytaj o napięcia bez obciążenia.** Producent podaje napięcia przy obciążeniu znamionowym, a bez obciążenia toroid 400 VA daje kilka procent więcej. Na tej podstawie sprawdź zapas C1/C2 (2× 400 V szeregowo) przy wysokim napięciu sieci; szacunek to ok. 560 V.
+3. **Obniżona indukcja (wersja „audio”)**, jeśli konfigurator ją oferuje. Mniej buczenia mechanicznego, mniejsze pole rozproszenia (obok są toroidalne TG) i mniejszy prąd załączenia. Kosztem jest większy rozmiar.
+4. **Wymiary.** Model obudowy zakłada TR1 ⌀130 × 65 mm na dławiku ⌀105 × 55 mm, wysokość komory do Z 156. Przy obniżonej indukcji 400 VA może wyjść większy, więc poproś o wymiary przed zamówieniem.
+5. **Izolacja.** S1 względem pozostałych uzwojeń i rdzenia z próbą co najmniej 2–3 kV. Wyprowadzenia S1 i odczepu 345 V w izolacji wysokonapięciowej, wyraźnie oznaczone.
+6. **Wyprowadzenia** długości 30–40 cm, z opisanymi kolorami lub etykietami. Zapytać o fazę uzwojeń.
+7. **Montaż:** środek zalany żywicą i komplet podkładek gumowych. Śruba przez TR1 i dławik nie może łączyć się z obudową z obu stron (zwój zwarty).
+8. **Bezpiecznik termiczny** w uzwojeniu jako opcja. F1 i F3 już są, więc nie jest konieczny.
+
+W tym samym zamówieniu: dławik L1 i 2× TTG-KT88PP (pytania w [do zrobienia](10-do-zrobienia.md#zamówienia)).
+
 ## Dławik L1
 
 Toroidalny **12 H / 400 mA, DCR 66,5 Ω** (Toroidy.pl). Przy ok. 0,33 A spadek na nim to ok. 22 V. Do sprawdzenia u producenta: czy indukcyjność jest podana przy prądzie stałym.

@@ -11,7 +11,10 @@
 
 ## Zamówienia
 
-- [ ] TR1 z **S2 6,3 V / 8 A**.
+- [ ] TR1 z **S2 6,3 V / 8 A**. Specyfikacja do konfiguratora w [zasilaniu](02-zasilanie.md#zamówienie-tr1-w-konfiguratorze-toroidypl).
+- [ ] Zmierz napięcie sieci w domu (wybór odczepu 345 / 360 V).
+- [ ] Toroidy.pl: napięcia TR1 bez obciążenia, wymiary TR1 (zwłaszcza przy obniżonej indukcji), próba izolacji S1, faza uzwojeń.
+- [ ] Toroidy.pl: czy da się dodać odczep 2 Ω w TTG-KT88PP (do porównania na słuch z kolumnami 4 Ω).
 - [ ] Toroidy.pl: dopuszczalne ΔI w parze dla TTG-KT88PP, kolory przewodów i faza uzwojeń; czy indukcyjność dławika podana przy prądzie DC.
 - [ ] Wymiary transformatorów i dławika do obudowy.
 - [ ] Lampy: tani komplet na uruchomienie; ewentualnie Psvane Summit (promocja do 11.11).

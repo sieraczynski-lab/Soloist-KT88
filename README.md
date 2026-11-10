@@ -57,6 +57,7 @@ Do tego sterowanie na **ESP32-S3**: sekwencja włączania, pomiar prądu każdej
 9. [Historia decyzji i poprawek](docs/09-historia-decyzji.md)
 10. [Do zrobienia / do sprawdzenia](docs/10-do-zrobienia.md)
 11. [Selektor wejść i drabinka głośności](docs/11-selektor.md)
+12. [Warianty lamp (opcjonalne)](docs/12-warianty-lamp.md)
 
 ## Stan
 

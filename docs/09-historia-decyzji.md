@@ -51,6 +51,11 @@ Zapis najważniejszych ustaleń, łącznie z błędami, które zostały znalezio
 4. Pierwsza wersja korekty (sam rezystor 47k do 0–10 V) przesuwała bias o ok. 14 V. Zastąpiona przesuwnikiem poziomu przed publikacją v0.22.
 5. Dokumentacja: dławik 5 H zamiast 12 H, rezystor siatki ekranowej podany jako 100 Ω zamiast R123/R124 270 Ω 2 W, opis masy gwiazdowej.
 
+## Transformator sieciowy i warianty lamp (10.11.2026)
+
+- Specyfikacja TR1 do konfiguratora Toroidy.pl: uzwojenia, pomiar napięcia sieci przed wyborem odczepu, napięcia bez obciążenia, obniżona indukcja, wymiary, izolacja, montaż ([zasilanie](02-zasilanie.md#zamówienie-tr1-w-konfiguratorze-toroidypl)).
+- Opcjonalne warianty lamp ([12](12-warianty-lamp.md)): zamienniki EF86; E88CC z mniejszym obciążeniem (12 mA, R111/R112 33k, ok. 70% mocy anody zamiast 87%); 6CG7 jako zamiennik E88CC w tej samej podstawce; głębsze sprzężenie zwrotne ok. 20 dB. Nic z tego nie jest jeszcze wprowadzone do schematu ani BOM.
+
 ## Obudowa
 
 - v0.1–0.2: bryły fasetowe, w Fusion widoczne jako siatka. v0.3: dokładne B-rep (ADVANCED_BREP).

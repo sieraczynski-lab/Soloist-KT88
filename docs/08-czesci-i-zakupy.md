@@ -43,6 +43,8 @@ ULN2803: **ULN2803G-S18-R** (UTC, LCSC C33924), tańszy od TI. Sprawdź, że obu
 | **Psvane Summit KT88** | 42 W / 8 W, żarzenie 1,6 A, pasuje bez zmian. Klasa Genalex Gold Lion. Brać dopasowaną czwórkę z pomiarami, sprawdzić wysokość i warunki reklamacji. W układzie z 14–16 dB sprzężenia zwrotnego różnice brzmienia między dobrymi KT88 są małe. |
 | **KT120** | 60 W strat, żarzenie 1,7–1,95 A, wyższa (do 144 mm). Mocy w tym układzie prawie nie przybędzie (ogranicza zasilacz i transformator), za to lampa pracuje „na luzie”. Wymaga **S2 8 A** i wyższej osłony (zrobione w v0.4). Do sprawdzenia w karcie KT120: dopuszczalna rezystancja w obwodzie siatki (u nas ok. 120 kΩ; w razie czego R115/R116 → 82k). |
 
+Zamienniki EF86 i E88CC oraz opcjonalne zmiany punktów pracy: [warianty lamp](12-warianty-lamp.md).
+
 ## Przewody (silikonowe)
 
 | Oznaczenie | Napięcie | Do czego |
@@ -59,6 +61,6 @@ Kolory: czerwony = B+, pomarańczowy = anody, żółty = UL/G2, niebieski = bias
 
 ## Transformatory (Toroidy.pl)
 
-- **TR1:** 400 VA, S2 zamówić na **8 A** (patrz [zasilanie](02-zasilanie.md)).
+- **TR1:** 400 VA, S2 zamówić na **8 A**. Pełna specyfikacja do konfiguratora: [zasilanie](02-zasilanie.md#zamówienie-tr1-w-konfiguratorze-toroidypl).
 - **L1:** 12 H / 400 mA / 66,5 Ω.
 - **TG:** TTG-KT88PP 4 kΩ UL. Zapytać o dopuszczalną różnicę prądów stałych w parze (ΔI).
